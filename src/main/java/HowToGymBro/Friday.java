@@ -10,7 +10,6 @@ public class Friday extends Room{
 
         //Asking questions and using a scanner to get an answer
         //and using that answer to change the stats
-        System.out.println("Hello mister dan");
         Smoking.ask();
         scanner();
         answerSmoking();

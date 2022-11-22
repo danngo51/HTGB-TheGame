@@ -2,9 +2,9 @@ package HowToGymBro;
 
 public class Fitness {
     public static void infoFitness() {
-        System.out.println("Regelmæssigt fysisk aktivitet har mange helbredsfordele, eksempler kunne være:");
-        System.out.println("Øget lunge- og hjertefunktion, ");
-        System.out.println("FITNESS");
+        System.out.println("Regelmæssig fysisk aktivitet har mange helbredsfordele, eksempler kunne være:");
+        System.out.println("Øget lunge- og hjertefunktion og sænkning af risikoen for prædiabetes og hjertesygdomme.");
+        System.out.println("Der er ikke nogen ulemper, så kom i gang makker!");
     }
 
     public static void ask(){

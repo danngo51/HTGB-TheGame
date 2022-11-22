@@ -30,11 +30,11 @@ public class Room {
     }
 
     public String getLongDescription() {
-        return "It is " + description + ".\n" + getExitString();
+        return "Det er " + description + ".\n" + getExitString();
     }
 
     private String getExitString() {
-        String returnString = "Exits:";
+        String returnString = "Udgange:";
         Set<String> keys = exits.keySet();
         for (String exit : keys) {
             returnString += " " + exit;
@@ -47,7 +47,7 @@ public class Room {
     }
 
     public static void printStats(){
-       Player.getPlayerStats();
+        Player.getPlayerStats();
     }
 
     public static void printInfo(String handling){
@@ -63,14 +63,14 @@ public class Room {
     // En metode, som stiller dig spørgsmål i rummene
     public static void askQuestions(String handling) {
         System.out.println("----------------------------------------------------------");
-        System.out.println("           Do you want to " +action+ ", yes or no?"        );
+        System.out.println("           Vil du gerne " +action+ ", ja eller nej?"        );
         System.out.println("----------------------------------------------------------");
-        System.out.println("          Consequences of your current actions are:"       );
+        System.out.println("          Konsekvenserne af dine handlinger er:"       );
         System.out.println("----------------------------------------------------------");
         printInfo(handling);
         System.out.println("----------------------------------------------------------");
-        System.out.println("   stats: " +action+ " will cause -1 point on "+organ  );
-        System.out.println("          for each day                                ");
+        System.out.println("   Stats: " +action+ " vil give dig -1 point i "+organ  );
+        System.out.println("          for hver dag.                                ");
         System.out.println("----------------------------------------------------------");
     } //end of askQ
 
@@ -81,24 +81,25 @@ public class Room {
      * stat should be effected.
      */
 
+
     //Answers
     public static void answerDrinking(){
-        if (PlayerAnswer.equals("yes")){
+        if (PlayerAnswer.equals("ja")){
             Player.setNewLiver(Player.getYesLiver());
         }
-        else if (PlayerAnswer.equals("no")){
+        else if (PlayerAnswer.equals("nej")){
             Player.setNewLiver(Player.getNoLiver());
         }
     }
 
     public static void answerDrugs(){
-        if (PlayerAnswer.equals("yes")){
+        if (PlayerAnswer.equals("ja")){
             Player.setNewLungs(Player.getYesLungs());
             Player.setNewLiver(Player.getYesLiver());
             Player.setNewHeart(Player.getYesHeart());
             Player.setNewPancreas(Player.getYesPancreas());
         }
-        else if (PlayerAnswer.equals("no")){
+        else if (PlayerAnswer.equals("nej")){
             Player.setNewLungs(Player.getNoLungs());
             Player.setNewLiver(Player.getNoLiver());
             Player.setNewHeart(Player.getNoHeart());
@@ -107,13 +108,13 @@ public class Room {
     }
 
     public static void answerFitness(){
-        if (PlayerAnswer.equals("no")){
+        if (PlayerAnswer.equals("nej")){
             Player.setNewLungs(Player.getYesLungs());
             Player.setNewLiver(Player.getYesLiver());
             Player.setNewHeart(Player.getYesHeart());
             Player.setNewPancreas(Player.getYesPancreas());
         }
-        else if (PlayerAnswer.equals("yes")){
+        else if (PlayerAnswer.equals("ja")){
             Player.setNewLungs(Player.getNoLungs());
             Player.setNewLiver(Player.getNoLiver());
             Player.setNewHeart(Player.getNoHeart());
@@ -122,45 +123,45 @@ public class Room {
     }
 
     public static void answerEating(){
-        if (PlayerAnswer.equals("yes")){
+        if (PlayerAnswer.equals("ja")){
             Player.setNewHeart(Player.getYesHeart());
             Player.setNewPancreas(Player.getYesPancreas());
         }
-        else if (PlayerAnswer.equals("no")){
+        else if (PlayerAnswer.equals("nej")){
             Player.setNewHeart(Player.getNoHeart());
             Player.setNewPancreas(Player.getNoPancreas());
         }
     }
 
     public static void answerSmoking(){
-        if (PlayerAnswer.equals("yes")){
+        if (PlayerAnswer.equals("ja")){
             Player.setNewLungs(Player.getYesLungs());
         }
-        else if (PlayerAnswer.equals("no")){
+        else if (PlayerAnswer.equals("nej")){
             Player.setNewLungs(Player.getNoLungs());
         }
     }
 
     public static void scanner(){
         Scanner reader = new Scanner(System.in);
-        System.out.print("Answer" + "\n" + "> ");
+        System.out.print("Svar" + "\n" + "> ");
         PlayerAnswer = reader.nextLine();
-        if (PlayerAnswer.equals("yes")) {
-            System.out.println("You answered: " + PlayerAnswer);
-        } else if (PlayerAnswer.equals("no")) {
-            System.out.println("You answered: " + PlayerAnswer);
+        if (PlayerAnswer.equals("ja")) {
+            System.out.println("Du har svaret: " + PlayerAnswer);
+        } else if (PlayerAnswer.equals("nej")) {
+            System.out.println("Du har svaret: " + PlayerAnswer);
         } else {
-            System.out.println("I dont understand, please answer with 'yes' or 'no'");
-            System.out.print("Answer" + "\n" + "> ");
+            System.out.println("Jeg forstår ikke hvad du mener, svar venligst med et 'ja' eller et 'nej'");
+            System.out.print("Svar" + "\n" + "> ");
             PlayerAnswer = reader.nextLine();
 
-            while (!"yes".equals(PlayerAnswer) & !"no".equals(PlayerAnswer)) {
-                System.out.println("I dont understand, please answer with 'yes' or 'no'");
-                System.out.print("Answer" + "\n" + "> ");
+            while (!"ja".equals(PlayerAnswer) & !"nej".equals(PlayerAnswer)) {
+                System.out.println("Jeg forstår ikke hvad du mener, svar venligst med et 'ja' eller et 'nej'");
+                System.out.print("Svar" + "\n" + "> ");
                 PlayerAnswer = reader.nextLine();
             }
-            if ("yes".equals(PlayerAnswer)) {
-                System.out.println("You answered: " + PlayerAnswer);
+            if ("ja".equals(PlayerAnswer)) {
+                System.out.println("Du har svaret: " + PlayerAnswer);
             }
         }
     }  //end of scanner
