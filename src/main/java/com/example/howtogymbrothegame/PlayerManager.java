@@ -50,8 +50,8 @@ public class PlayerManager {
 
     @Override
     public String toString() {
-        return "Player stats:" + "heart=" + heart +
-                "lungs=" + lungs + ", liver=" + liver + "pancreas=" + pancreas;
+        return "Spiller stats:" + "hjerte=" + heart +
+                "lunger=" + lungs + ", lever=" + liver + "bugspytkirtlen=" + pancreas;
     } // end of toString
 
 
@@ -151,14 +151,14 @@ public class PlayerManager {
     //but when it gets printed out it looks better
     public void getPlayerStats() {
         System.out.println();
-        System.out.println("---------------------------------");
-        System.out.println("|  Here are your current stats: |");
-        System.out.println("---------------------------------");
+        System.out.println("--------------------------------");
+        System.out.println("| Her er dine nuværende stats: |");
+        System.out.println("--------------------------------");
         System.out.println("| Lunger:          "+getLungs()+"        |");
         System.out.println("| Hjerte:          "+getHeart()+"        |");
         System.out.println("| Lever:           "+getLiver()+"        |");
         System.out.println("| Bugspytkirtel:   "+getPancreas()+"        |");
-        System.out.println("---------------------------------");
+        System.out.println("--------------------------------");
     }
     //GETTERS
     /*The math.round and *100.0 /100.0, is an easy fix to rounding.
