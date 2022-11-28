@@ -53,6 +53,7 @@ public class Door {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
+        stage.setTitle("Kantine");
         stage.show();
     }
 
@@ -61,6 +62,7 @@ public class Door {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
+        stage.setTitle("Fitness");
         stage.show();
     }
 
@@ -69,8 +71,10 @@ public class Door {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
+        stage.setTitle("Drikke");
         stage.show();
     }
+
 
 
 }
