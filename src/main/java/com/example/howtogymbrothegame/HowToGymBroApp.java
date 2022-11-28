@@ -24,8 +24,6 @@ public class HowToGymBroApp extends Application {
 
         //window tittle
         stage.setTitle("How To Gym Bro");
-
-
         stage.show();
     }
 
