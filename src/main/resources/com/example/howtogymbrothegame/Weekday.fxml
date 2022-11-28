@@ -80,7 +80,7 @@
       </Label>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="740.0" layoutY="343.0" onMouseClicked="#switchToCanteen" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../Images/Resstaurant.png" />
+            <Image url="@../../../../../Images/Restaurant.png" />
          </image>
       </ImageView>
    </children>
