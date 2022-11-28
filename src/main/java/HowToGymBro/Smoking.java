@@ -2,9 +2,10 @@ package HowToGymBro;
 
 public class Smoking{
     public static void infoSmoking(){
-        System.out.println("langvarigt rygning i mellem 1-4 cigaretter dagligt vil signifikant øge risikoen for at dø af hjertesygdomme.");
-        System.out.println("Konsekvenserne ved for højt tobaksindtag kan føre iskemi, som nedsætter blodtilgang til dele af hjertemusklen.");
-        System.out.println("Og kan derudover medføre til alle former for cancer");
+        System.out.println("Langvarig rygning på mellem 1-4 cigaretter dagligt vil signifikant øge risikoen for at dø af hjertesygdomme.");
+        System.out.println("Konsekvenserne ved for højt tobaksindtag kan føre til iskæmi, som nedsætter blodtilgang til dele af hjertemusklen.");
+        System.out.println("Dette kan derudover føre til adskillige former for cancer.");
+        System.out.println("Rygning øger også risikoen for lungekræft og kronisk obstruktiv lungesygdom (KOL).");
         System.out.println("Vil du virkelig udsætte dig selv for det?");
     }
 

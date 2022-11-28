@@ -15,6 +15,7 @@ public class Game {
     private Sunday søndag;
     private Overview overview;
 
+
     public Game() {
         createRooms();
         commands = new CommandWordsImplementation();
@@ -26,7 +27,7 @@ public class Game {
         this.fredag = new Friday("fredag");
         this.lørdag = new Saturday("lørdag");
         this.søndag = new Sunday("søndag");
-        this.overview = new Overview("this is a overview of all stats");
+        this.overview = new Overview("et samlet overblik over dine stats.");
 
         mainHub.setExit("mandagTilTorsdag", mandagTilTorsdag);
         mandagTilTorsdag.setExit("fredag", fredag);
@@ -34,19 +35,16 @@ public class Game {
         lørdag.setExit("søndag", søndag);
         søndag.setExit("Overview", overview);
 
-        overview.setExit("mandagTilTorsdag", mandagTilTorsdag);
-        overview.setExit("fredag", fredag);
-        overview.setExit("lørdag", lørdag);
-        overview.setExit("søndag", søndag);
+        overview.setExit("MainHub", mainHub);
 
         currentRoom = mainHub;
 
     } //end of createRooms
 
     private void setExits (){
+        mainHub.setExit("fredag",fredag);
         mainHub.setExit("lørdag", lørdag);
         mainHub.setExit("søndag", søndag);
-        mainHub.setExit("Overview", overview);
 
         mandagTilTorsdag.setExit("MainHub", mainHub);
         mandagTilTorsdag.setExit("lørdag", lørdag);
@@ -74,14 +72,14 @@ public class Game {
         if (!command.hasCommandValue()) {
             //No direction on command.
             //Can't continue with GO command.
-            System.out.println("Go where?");
+            System.out.println("Gå hvorhen?");
             return;
         }
         String direction = command.getCommandValue();
         Room nextRoom = currentRoom.getExit(direction);
 
         if (nextRoom == null) {
-            System.out.println("You cant go that way");
+            System.out.println("Du kan ikke gå i den retning.");
         } else {
             currentRoom = nextRoom;
             if (Objects.equals(direction, "mandagTilTorsdag")){
@@ -92,7 +90,7 @@ public class Game {
             }
             if (Objects.equals(direction, "lørdag")){
                 Saturday.question();
-                }
+            }
             if (Objects.equals(direction, "søndag")){
                 Sunday.question();
             }
