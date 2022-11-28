@@ -39,7 +39,6 @@ public class Activities {
         organ = "lunger";
         String smoking = "smoking";
         askQuestions(smoking);
-
     }
 
     public void infoDrinking() {
