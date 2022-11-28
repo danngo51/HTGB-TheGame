@@ -40,7 +40,7 @@ public class Door {
         stage.show();
     }
 
-    public void switchToScene2(ActionEvent event) throws IOException {
+    public void switchToWeekday(MouseEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("Weekday.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
