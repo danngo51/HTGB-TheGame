@@ -31,6 +31,7 @@ public class Door {
     @FXML
     ImageView imgGrass;
 
+
     //Method to change scenes/doors
     public void switchToMainHub(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("MainHub.fxml"));
@@ -39,6 +40,8 @@ public class Door {
         stage.setScene(scene);
         stage.show();
     }
+
+
 
     public void switchToWeekday(MouseEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("Weekday.fxml"));
