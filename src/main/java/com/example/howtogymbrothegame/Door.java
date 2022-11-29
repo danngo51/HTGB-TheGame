@@ -18,6 +18,11 @@ public class Door {
     private Scene scene;
     private Parent root;
 
+    //Room access
+    private boolean accessFriday;
+    private boolean accessSaturday;
+    private boolean accessSunday;
+
     @FXML
     ImageView imgSmokingShelter;
     @FXML
@@ -41,16 +46,6 @@ public class Door {
         stage.show();
     }
 
-
-
-    public void switchToWeekday(MouseEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("Weekday.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setTitle("Weekday");
-        stage.show();
-    }
 
     public void switchToCanteen(MouseEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("Kantine.fxml"));
@@ -80,5 +75,78 @@ public class Door {
     }
 
 
+    //Switching weekdays methods
+    public void switchToMTT(MouseEvent event) throws IOException {
+        //Access to Friday
+        setAccessFriday(true);
+        //Load stage
+        System.out.println("hej");
+        root = FXMLLoader.load(getClass().getResource("Weekday.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Mandag til torsdag");
+        stage.show();
+        System.out.println(accessFriday);
+    }
 
+
+    public void switchToFriday(MouseEvent event) throws IOException {
+        System.out.println(accessFriday);
+        //Load stage
+        if(accessFriday){
+            //Access to Saturday
+            setAccessSaturday(true);
+            System.out.println("hej");
+            root = FXMLLoader.load(getClass().getResource("Weekday.fxml"));
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.setTitle("Fredag");
+            stage.show();
+        } else {
+            System.out.println("No access fredag");
+        }
+    }
+
+    public void switchToSaturday(MouseEvent event) throws IOException {
+        if(accessSaturday){
+            //Access to Sunday
+            accessSunday = true;
+
+            root = FXMLLoader.load(getClass().getResource("Weekday.fxml"));
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.setTitle("Lørdag");
+            stage.show();
+        } else {
+            System.out.println("No access lørdag");
+        }
+    }
+
+    public void switchToSunday(MouseEvent event) throws IOException {
+        if(accessSunday){
+            root = FXMLLoader.load(getClass().getResource("Weekday.fxml"));
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.setTitle("Søndag");
+            stage.show();
+        } else {
+            System.out.println("No access søndag");
+        }
+    }
+
+    public void setAccessFriday(boolean accessFriday) {
+        this.accessFriday = accessFriday;
+    }
+
+    public void setAccessSaturday(boolean accessSaturday) {
+        this.accessSaturday = accessSaturday;
+    }
+
+    public void setAccessSunday(boolean accessSunday) {
+        this.accessSunday = accessSunday;
+    }
 }
