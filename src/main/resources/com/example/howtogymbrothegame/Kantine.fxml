@@ -15,7 +15,7 @@
    <children>
       <Pane fx:id="smallPane" layoutX="980.0" prefHeight="720.0" prefWidth="300.0">
          <children>
-            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#0d61d0" height="150.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="280.0" />
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="DODGERBLUE" height="150.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="280.0" />
             <Rectangle arcHeight="20.0" arcWidth="20.0" fill="DODGERBLUE" height="540.0" layoutX="10.0" layoutY="170.0" stroke="BLACK" strokeType="INSIDE" width="280.0" />
             <Label layoutX="100.0" layoutY="15.0" text="Player stats">
                <font>
@@ -80,9 +80,10 @@
             <Group layoutX="360.0" layoutY="306.0" />
             <ImageView fitHeight="720.0" fitWidth="980.0">
                <image>
-                  <Image url="file:src/Images/RestaurantInterior.PNG" />
+                  <Image url="@../../../../../Images/RestaurantInterior.PNG" />
                </image>
             </ImageView>
+            <ImageView fitHeight="94.0" fitWidth="34.0" layoutX="449.0" layoutY="319.0" onMouseClicked="#switchtoWeekDays" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
    </children>
