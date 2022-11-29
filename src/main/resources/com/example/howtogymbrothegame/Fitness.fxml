@@ -73,9 +73,9 @@
       <Pane prefHeight="720.0" prefWidth="980.0">
          <children>
             <Button layoutX="-23.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchtoWeekDays" prefHeight="7.0" prefWidth="100.0" rotate="-90.0" text="EXIT" />
-            <ImageView fitHeight="720.0" fitWidth="980.0" pickOnBounds="true">
+            <ImageView fitHeight="728.0" fitWidth="996.0" layoutX="-16.0" layoutY="-6.0" pickOnBounds="true">
                <image>
-                  <Image url="@../../../../../Images/gym.png" />
+                  <Image url="file:src/Images/GymInterior.PNG" />
                </image>
             </ImageView>
          </children>
