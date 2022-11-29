@@ -77,22 +77,21 @@ public class Door {
 
     //Switching weekdays methods
     public void switchToMTT(MouseEvent event) throws IOException {
-        //Access to Friday
-        setAccessFriday(true);
         //Load stage
-        System.out.println("hej");
         root = FXMLLoader.load(getClass().getResource("Weekday.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("Mandag til torsdag");
         stage.show();
+
+        //Access to friday
+
         System.out.println(accessFriday);
     }
 
 
     public void switchToFriday(MouseEvent event) throws IOException {
-        System.out.println(accessFriday);
         //Load stage
         if(accessFriday){
             //Access to Saturday
