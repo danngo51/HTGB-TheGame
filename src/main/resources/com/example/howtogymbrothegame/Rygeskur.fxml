@@ -76,7 +76,7 @@
                <children>
                   <ImageView fitHeight="730.0" fitWidth="990.0" layoutX="-10.0" layoutY="-10.0" pickOnBounds="true">
                      <image>
-                        <Image url="@../../../../../Images/smooking%20room.png" />
+                        <Image url="@../../../../../Images/smookingRoom.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="36.0" fitWidth="40.0" layoutX="370.0" layoutY="464.0" pickOnBounds="true" preserveRatio="true">

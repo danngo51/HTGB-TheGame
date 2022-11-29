@@ -3,6 +3,8 @@
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
@@ -76,6 +78,11 @@
                </font>
             </Button>
             <Group layoutX="360.0" layoutY="306.0" />
+            <ImageView fitHeight="720.0" fitWidth="980.0">
+               <image>
+                  <Image url="file:src/Images/RestaurantInterior.PNG" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
    </children>
