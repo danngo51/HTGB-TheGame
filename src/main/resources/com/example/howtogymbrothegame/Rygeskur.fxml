@@ -76,17 +76,17 @@
                   <Button layoutX="-23.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchtoWeekDays" prefHeight="7.0" prefWidth="100.0" rotate="-90.0" text="EXIT" />
                   <ImageView fitHeight="737.0" fitWidth="1002.0" layoutX="-22.0" layoutY="-11.0">
                      <image>
-                        <Image url="file:src/Images/RygeskurInterior.PNG" />
+                        <Image url="@../../../../../Images/RygeskurInterior.PNG" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="36.0" fitWidth="40.0" layoutX="434.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="file:src/Images/Cigaretter.png" />
+                        <Image url="@../../../../../Images/Cigaretter.png" />
                      </image>
                   </ImageView>
                   <ImageView fitHeight="30.0" fitWidth="38.0" layoutX="729.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="file:src/Images/drugs.png" />
+                        <Image url="@../../../../../Images/drugs.png" />
                      </image>
                   </ImageView>
                </children>
