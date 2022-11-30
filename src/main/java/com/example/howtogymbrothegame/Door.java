@@ -60,6 +60,15 @@ public class Door {
         stage.show();
     }
 
+    public void switchToSmoking(MouseEvent event) throws IOException {
+        root = FXMLLoader.load(getClass().getResource("Rygeskur.fxml"));
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Smoking");
+        stage.show();
+    }
+
     public void switchToDrinking(MouseEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("Drikke.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
