@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
@@ -17,6 +18,9 @@ public class Activities {
     private Parent root;
     private Stage stage;
     private Scene scene;
+
+    @FXML
+    private Label heart, pancreas, lungs, liver;
 
     public void infoSmoking(){
         System.out.println("Langvarig rygning på mellem 1-4 cigaretter dagligt vil signifikant øge risikoen for at dø af hjertesygdomme.");
@@ -238,5 +242,26 @@ public class Activities {
             }
         }
     }  //end of scanner
+
+    //Fitness
+
+    //Rygeskur
+
+    //pop-up boks
+
+    //Drikke
+
+    //Kantine
+    @FXML
+    private void updateAll(){
+        updatePlayerStats();
+    }
+    @FXML
+    private void updatePlayerStats(){
+        Player.setHeart(30);
+        //this.heart.setText();
+        this.pancreas.setText("" +Player);
+    }
+
 
 }

@@ -57,7 +57,7 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label fx:id="Liver" layoutX="235.0" layoutY="100.0" text="50.0">
+            <Label fx:id="liver" layoutX="235.0" layoutY="100.0" text="50.0">
                <font>
                   <Font size="15.0" />
                </font>
@@ -84,7 +84,7 @@
                </image>
             </ImageView>
             <ImageView fx:id="doorHandleCanteen" fitHeight="94.0" fitWidth="34.0" layoutX="449.0" layoutY="319.0" onMouseClicked="#switchtoWeekDays" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="burger" fitHeight="68.0" fitWidth="110.0" layoutX="250.0" layoutY="303.0" onMouseClicked="#infoEating" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="burger" fitHeight="500.0" fitWidth="500.0" layoutX="250.0" layoutY="303.0" onMouseClicked="#updateAll" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
    </children>
