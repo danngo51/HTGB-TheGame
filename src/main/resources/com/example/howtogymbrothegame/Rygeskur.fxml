@@ -89,6 +89,8 @@
                         <Image url="@../../../../../Images/drugs.png" />
                      </image>
                   </ImageView>
+                  <Button fx:id="btn1" layoutX="416.0" layoutY="461.0" mnemonicParsing="false" onAction="#handleButtonEvent" text="Cigaretter" />
+                  <Button fx:id="btn2" layoutX="721.0" layoutY="462.0" mnemonicParsing="false" onAction="#handleButtonEvent" text="Drugs" />
                </children>
             </Pane>
          </children>
