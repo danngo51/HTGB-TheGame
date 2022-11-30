@@ -251,6 +251,7 @@ public class Activities {
 
     //Drikke
 
+
     //Kantine
     @FXML
     private void updateAll(){
