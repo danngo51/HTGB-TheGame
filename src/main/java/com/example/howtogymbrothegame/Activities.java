@@ -27,7 +27,7 @@ public class Activities {
     }
 
     @FXML
-    public void switchtoWeekDays(MouseEvent event) throws IOException {
+    public void switchtoWeekDays(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("Weekday.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
