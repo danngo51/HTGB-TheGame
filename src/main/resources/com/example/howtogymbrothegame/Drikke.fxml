@@ -82,7 +82,7 @@
                <Image url="@../../../../../Images/BeerBottle.png" />
             </image>
          </ImageView>
-         <ChoiceBox layoutX="238.0" layoutY="386.0" prefHeight="9.0" prefWidth="103.0" />
+         <ChoiceBox fx:id="myChoiceBox" layoutX="250.0" layoutY="390.0" minHeight="15.0" prefHeight="21.0" prefWidth="80.0" />
         </children>
     </Pane>
 </AnchorPane>

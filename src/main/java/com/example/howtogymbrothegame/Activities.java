@@ -250,6 +250,9 @@ public class Activities {
     //pop-up boks
 
     //Drikke
+    @FXML
+    private void
+
 
     //Kantine
     @FXML
