@@ -18,18 +18,6 @@ public class Door {
     private Scene scene;
     private Parent root;
 
-    @FXML
-    ImageView imgSmokingShelter;
-    @FXML
-    ImageView imgSidewalk;
-    @FXML
-    ImageView imgGym;
-    @FXML
-    ImageView imgDrinkingBar;
-    @FXML
-    ImageView imgBackground;
-    @FXML
-    ImageView imgGrass;
 
 
     //Method to change scenes/doors
@@ -89,15 +77,12 @@ public class Door {
         //Access to friday
         access.setAccessFriday(true);
 
-
         root = FXMLLoader.load(getClass().getResource("Weekday.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.setTitle("Mandag til torsdag");
         stage.show();
-
-
     }
 
 
@@ -113,12 +98,10 @@ public class Door {
             stage.setScene(scene);
             stage.setTitle("Fredag");
             stage.show();
-
         }
         else {
             System.out.println("ingen adgang fredag");
         }
-
     }
 
     public void switchToSaturday(MouseEvent event) throws IOException {
