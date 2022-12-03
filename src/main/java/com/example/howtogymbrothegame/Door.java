@@ -6,6 +6,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -140,6 +142,19 @@ public class Door {
         else {
             System.out.println("ingen adgang søndag");
         }
+    }
+
+    public void logout(ActionEvent event){
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Logout");
+        alert.setHeaderText("Du er ved at logge ud");
+
+        if (alert.showAndWait().get() == ButtonType.OK) {
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            System.out.println("Du er nu logget ud!");
+            stage.close();
+        }
+
     }
 
 }
