@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -21,6 +22,8 @@ public class Activities {
 
     @FXML
     private Label heart, pancreas, lungs, liver;
+    @FXML
+    private Text factsInfo;
 
     public void infoSmoking(){
         System.out.println("Langvarig rygning på mellem 1-4 cigaretter dagligt vil signifikant øge risikoen for at dø af hjertesygdomme.");
@@ -250,24 +253,30 @@ public class Activities {
     //pop-up boks
 
     //Drikke
-    /*
-    @FXML
-    private void
+    //@FXML
+    //private void
 
 
     //Kantine
-    @FXML
+    //@FXML
     private void updateAll(){
         updatePlayerStats();
     }
+
     @FXML
     private void updatePlayerStats(){
-        Player.setHeart(30);
+        //Player.setHeart(50);
         //this.heart.setText();
-        this.pancreas.setText("" +Player);
+        //this.pancreas.setText(Player.setYesPancreas(0.1));
+        //this.pancreas.setText(String.valueOf(Player.setPancreas(Player.getPancreas() + Player.getYesPancreas())));
+        factsInfo = new Text("Velkommen");
     }
 
-     */
+
+    @FXML
+    private void setText(){
+    //factsInfo = new Text("Velkommen");
+    }
 
 
 }
