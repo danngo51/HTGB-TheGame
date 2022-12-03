@@ -112,9 +112,7 @@ public class Activities {
         askQuestions(eating);
     }
 
-    public void printStats() {
-        Player.getPlayerStats();
-    }
+
 
     public void printInfo(String handling) {
         switch (handling) {
@@ -134,8 +132,7 @@ public class Activities {
     //'PlayerAnswer' is used to store the players decision.
     private String PlayerAnswer;
 
-    //Creating a player with the score of 50 on all stats
-    PlayerManager Player = new PlayerManager(50.000, 50.000, 50.000, 50.000);
+
 
 
     // En metode, som stiller dig spørgsmål i rummene
@@ -158,87 +155,7 @@ public class Activities {
      * using 'PlayerAnswer' to determine how the player
      * stat should be effected.
      */
-
-
-    //Answers
-    public void answerDrinking() {
-        if (PlayerAnswer.equals("ja")) {
-            Player.setNewLiver(Player.getYesLiver());
-        } else if (PlayerAnswer.equals("nej")) {
-            Player.setNewLiver(Player.getNoLiver());
-        }
-    }
-
-    public void answerDrugs() {
-        if (PlayerAnswer.equals("ja")) {
-            Player.setNewLungs(Player.getYesLungs());
-            Player.setNewLiver(Player.getYesLiver());
-            Player.setNewHeart(Player.getYesHeart());
-            Player.setNewPancreas(Player.getYesPancreas());
-        } else if (PlayerAnswer.equals("nej")) {
-            Player.setNewLungs(Player.getNoLungs());
-            Player.setNewLiver(Player.getNoLiver());
-            Player.setNewHeart(Player.getNoHeart());
-            Player.setNewPancreas(Player.getNoPancreas());
-        }
-    }
-
-    public void answerFitness() {
-        if (PlayerAnswer.equals("nej")) {
-            Player.setNewLungs(Player.getYesLungs());
-            Player.setNewLiver(Player.getYesLiver());
-            Player.setNewHeart(Player.getYesHeart());
-            Player.setNewPancreas(Player.getYesPancreas());
-        } else if (PlayerAnswer.equals("ja")) {
-            Player.setNewLungs(Player.getNoLungs());
-            Player.setNewLiver(Player.getNoLiver());
-            Player.setNewHeart(Player.getNoHeart());
-            Player.setNewPancreas(Player.getNoPancreas());
-        }
-    }
-
-    public void answerEating() {
-        if (PlayerAnswer.equals("ja")) {
-            Player.setNewHeart(Player.getYesHeart());
-            Player.setNewPancreas(Player.getYesPancreas());
-        } else if (PlayerAnswer.equals("nej")) {
-            Player.setNewHeart(Player.getNoHeart());
-            Player.setNewPancreas(Player.getNoPancreas());
-        }
-    }
-
-    public void answerSmoking() {
-        if (PlayerAnswer.equals("ja")) {
-            Player.setNewLungs(Player.getYesLungs());
-        } else if (PlayerAnswer.equals("nej")) {
-            Player.setNewLungs(Player.getNoLungs());
-        }
-    }
-
-    public void scanner() {
-        Scanner reader = new Scanner(System.in);
-        System.out.print("Svar" + "\n" + "> ");
-        PlayerAnswer = reader.nextLine();
-        if (PlayerAnswer.equals("ja")) {
-            System.out.println("Du har svaret: " + PlayerAnswer);
-        } else if (PlayerAnswer.equals("nej")) {
-            System.out.println("Du har svaret: " + PlayerAnswer);
-        } else {
-            System.out.println("Jeg forstår ikke hvad du mener, svar venligst med 'ja' eller 'nej'.");
-            System.out.print("Svar" + "\n" + "> ");
-            PlayerAnswer = reader.nextLine();
-
-            while (!"ja".equals(PlayerAnswer) & !"nej".equals(PlayerAnswer)) {
-                System.out.println("Jeg forstår ikke hvad du mener, svar venligst med 'ja' eller 'nej'.");
-                System.out.print("Svar" + "\n" + "> ");
-                PlayerAnswer = reader.nextLine();
-            }
-            if ("yes".equals(PlayerAnswer)) {
-                System.out.println("Du har svaret: " + PlayerAnswer);
-            }
-        }
-    }  //end of scanner
-
+    PlayerManager player = PlayerManager.getInstance();
     //Fitness
 
     //Rygeskur
@@ -294,9 +211,9 @@ public class Activities {
 
     @FXML
     private void updatePlayerStats() {
-        Player.setHeart(30);
+        player.setHeart(30);
         //this.heart.setText();
-        this.pancreas.setText("" + Player);
+        this.pancreas.setText("" + player);
     }
 
 
