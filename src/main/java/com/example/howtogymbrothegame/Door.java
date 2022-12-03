@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -17,7 +18,6 @@ public class Door {
     private Stage stage;
     private Scene scene;
     private Parent root;
-
 
 
     //Method to change scenes/doors
