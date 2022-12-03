@@ -112,9 +112,7 @@ public class Activities {
         askQuestions(eating);
     }
 
-    public void printStats() {
-        Player.getPlayerStats();
-    }
+
 
     public void printInfo(String handling) {
         switch (handling) {
@@ -152,6 +150,12 @@ public class Activities {
     } //end of askQ
 
 
+    //The methods for creating a scanner and using the user input.
+    /* All the methods that starts with 'answer' is
+     * using 'PlayerAnswer' to determine how the player
+     * stat should be effected.
+     */
+    PlayerManager player = PlayerManager.getInstance();
     //Fitness
 
     //Rygeskur
@@ -207,9 +211,8 @@ public class Activities {
 
     @FXML
     private void updatePlayerStats() {
-        Player.setHeart(30);
         //this.heart.setText();
-        this.pancreas.setText("" + Player);
+        this.pancreas.setText("" + player);
     }
 
 
