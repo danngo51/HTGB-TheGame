@@ -177,7 +177,7 @@ public class Activities {
         //Player.setHeart(50);
         //this.heart.setText();
         //this.pancreas.setText(Player.setYesPancreas(0.1));
-        //this.pancreas.setText(String.valueOf(Player.setPancreas(Player.getPancreas() + Player.getYesPancreas())));
+        this.pancreas.setText(String.valueOf(player.getPancreas() + player.getYesPancreas()));
         factsInfo = new Text("Velkommen");
     }
 
