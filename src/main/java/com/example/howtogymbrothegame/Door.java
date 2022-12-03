@@ -82,7 +82,7 @@ public class Door {
     public void switchToMTT(MouseEvent event) throws IOException {
         //Access to friday
         access.setAccessFriday(true);
-
+        lockFriday.setVisible(false);
         root = FXMLLoader.load(getClass().getResource("Weekday.fxml"));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -140,6 +140,7 @@ public class Door {
         else {
             System.out.println("ingen adgang søndag");
         }
+
     }
 
 }

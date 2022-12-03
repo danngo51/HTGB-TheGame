@@ -39,7 +39,7 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="34.0" layoutY="46.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
             <ImageView fx:id="lockFriday" fitHeight="168.0" fitWidth="171.0" layoutX="34.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Images/Lock.png" />
+                  <Image url="file:src/Images/Lock.png" />
                </image>
             </ImageView>
          </children>
@@ -54,7 +54,7 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="34.0" layoutY="46.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
             <ImageView fx:id="lockSaturday" fitHeight="168.0" fitWidth="171.0" layoutX="34.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Images/Lock.png" />
+                  <Image url="file:src/Images/Lock.png" />
                </image>
             </ImageView>
          </children>
@@ -69,7 +69,7 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="34.0" layoutY="46.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
             <ImageView fx:id="lockSunday" fitHeight="168.0" fitWidth="171.0" layoutX="36.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Images/Lock.png" />
+                  <Image url="file:src/Images/Lock.png" />
                </image>
             </ImageView>
          </children>
