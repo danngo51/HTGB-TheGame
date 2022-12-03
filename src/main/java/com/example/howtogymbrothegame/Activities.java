@@ -250,6 +250,7 @@ public class Activities {
     //pop-up boks
 
     //Drikke
+    /*
     @FXML
     private void
 
@@ -265,6 +266,8 @@ public class Activities {
         //this.heart.setText();
         this.pancreas.setText("" +Player);
     }
+
+     */
 
 
 }

@@ -18,6 +18,12 @@ public class Door {
     private Scene scene;
     private Parent root;
 
+    @FXML
+    ImageView lockFriday;
+    @FXML
+    ImageView lockSaturday;
+    @FXML
+    ImageView lockSunday;
 
 
     //Method to change scenes/doors
@@ -135,4 +141,5 @@ public class Door {
             System.out.println("ingen adgang søndag");
         }
     }
+
 }
