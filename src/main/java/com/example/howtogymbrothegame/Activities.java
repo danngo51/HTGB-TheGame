@@ -6,9 +6,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.text.Text;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -22,10 +22,8 @@ public class Activities {
 
     @FXML
     private Label heart, pancreas, lungs, liver;
-    @FXML
-    private Text factsInfo;
 
-    public void infoSmoking(){
+    public void infoSmoking() {
         System.out.println("Langvarig rygning på mellem 1-4 cigaretter dagligt vil signifikant øge risikoen for at dø af hjertesygdomme.");
         System.out.println("Konsekvenserne ved for højt tobaksindtag kan føre til iskæmi, som nedsætter blodtilgang til dele af hjertemusklen.");
         System.out.println("Dette kan derudover føre til adskillige former for cancer.");
@@ -36,13 +34,13 @@ public class Activities {
     @FXML
     public void switchtoWeekDays(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("Weekday.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
 
-    public void smokingAsk(){
+    public void smokingAsk() {
         //getting access to questions by creation an object
         action = "ryge";
         organ = "lunger";
@@ -75,7 +73,7 @@ public class Activities {
         System.out.println("Vil du virkelig udsætte dig selv for det?");
     }
 
-    public void drugsAsk(){
+    public void drugsAsk() {
         //getting access to questions by creation an object
         action = "stoffer";
         organ = "alle organer";
@@ -89,7 +87,7 @@ public class Activities {
         System.out.println("Der er ikke nogen ulemper, så kom i gang makker!");
     }
 
-    public void fitnessAsk(){
+    public void fitnessAsk() {
         //getting access to questions by creation an object
         action = "dyrke fitness";
         organ = "alle organer";
@@ -106,7 +104,7 @@ public class Activities {
         System.out.println("Vil du virkelig udsætte dig selv for det?");
     }
 
-    public void eatingAsk(){
+    public void eatingAsk() {
         //getting access to questions by creation an object
         action = "spise";
         organ = "bugspytkirtel og hjerte";
@@ -114,8 +112,11 @@ public class Activities {
         askQuestions(eating);
     }
 
+    public void printStats() {
+        Player.getPlayerStats();
+    }
 
-    public void printInfo(String handling){
+    public void printInfo(String handling) {
         switch (handling) {
             case "smoking" -> infoSmoking();
             case "drinking" -> infoDrinking();
@@ -130,18 +131,23 @@ public class Activities {
     String action;
     String organ;
 
+    //'PlayerAnswer' is used to store the players decision.
+    private String PlayerAnswer;
+
+    //Creating a player with the score of 50 on all stats
+    PlayerManager Player = new PlayerManager(50.000, 50.000, 50.000, 50.000);
 
 
     // En metode, som stiller dig spørgsmål i rummene
-    public void askQuestions (String handling) {
+    public void askQuestions(String handling) {
         System.out.println("----------------------------------------------------------");
-        System.out.println("              Vil du " +action+ ", ja eller nej?"        );
+        System.out.println("              Vil du " + action + ", ja eller nej?");
         System.out.println("----------------------------------------------------------");
-        System.out.println("         Konsekvenserne af dine nuværende handlinger er:"       );
+        System.out.println("         Konsekvenserne af dine nuværende handlinger er:");
         System.out.println("----------------------------------------------------------");
         printInfo(handling);
         System.out.println("----------------------------------------------------------");
-        System.out.println("   Stats: " +action+ " giver dig -1 point i "+organ  );
+        System.out.println("   Stats: " + action + " giver dig -1 point i " + organ);
         System.out.println("          for hver dag.                                ");
         System.out.println("----------------------------------------------------------");
     } //end of askQ
@@ -152,39 +158,145 @@ public class Activities {
      * using 'PlayerAnswer' to determine how the player
      * stat should be effected.
      */
-    PlayerManager player = PlayerManager.getInstance();
 
+
+    //Answers
+    public void answerDrinking() {
+        if (PlayerAnswer.equals("ja")) {
+            Player.setNewLiver(Player.getYesLiver());
+        } else if (PlayerAnswer.equals("nej")) {
+            Player.setNewLiver(Player.getNoLiver());
+        }
+    }
+
+    public void answerDrugs() {
+        if (PlayerAnswer.equals("ja")) {
+            Player.setNewLungs(Player.getYesLungs());
+            Player.setNewLiver(Player.getYesLiver());
+            Player.setNewHeart(Player.getYesHeart());
+            Player.setNewPancreas(Player.getYesPancreas());
+        } else if (PlayerAnswer.equals("nej")) {
+            Player.setNewLungs(Player.getNoLungs());
+            Player.setNewLiver(Player.getNoLiver());
+            Player.setNewHeart(Player.getNoHeart());
+            Player.setNewPancreas(Player.getNoPancreas());
+        }
+    }
+
+    public void answerFitness() {
+        if (PlayerAnswer.equals("nej")) {
+            Player.setNewLungs(Player.getYesLungs());
+            Player.setNewLiver(Player.getYesLiver());
+            Player.setNewHeart(Player.getYesHeart());
+            Player.setNewPancreas(Player.getYesPancreas());
+        } else if (PlayerAnswer.equals("ja")) {
+            Player.setNewLungs(Player.getNoLungs());
+            Player.setNewLiver(Player.getNoLiver());
+            Player.setNewHeart(Player.getNoHeart());
+            Player.setNewPancreas(Player.getNoPancreas());
+        }
+    }
+
+    public void answerEating() {
+        if (PlayerAnswer.equals("ja")) {
+            Player.setNewHeart(Player.getYesHeart());
+            Player.setNewPancreas(Player.getYesPancreas());
+        } else if (PlayerAnswer.equals("nej")) {
+            Player.setNewHeart(Player.getNoHeart());
+            Player.setNewPancreas(Player.getNoPancreas());
+        }
+    }
+
+    public void answerSmoking() {
+        if (PlayerAnswer.equals("ja")) {
+            Player.setNewLungs(Player.getYesLungs());
+        } else if (PlayerAnswer.equals("nej")) {
+            Player.setNewLungs(Player.getNoLungs());
+        }
+    }
+
+    public void scanner() {
+        Scanner reader = new Scanner(System.in);
+        System.out.print("Svar" + "\n" + "> ");
+        PlayerAnswer = reader.nextLine();
+        if (PlayerAnswer.equals("ja")) {
+            System.out.println("Du har svaret: " + PlayerAnswer);
+        } else if (PlayerAnswer.equals("nej")) {
+            System.out.println("Du har svaret: " + PlayerAnswer);
+        } else {
+            System.out.println("Jeg forstår ikke hvad du mener, svar venligst med 'ja' eller 'nej'.");
+            System.out.print("Svar" + "\n" + "> ");
+            PlayerAnswer = reader.nextLine();
+
+            while (!"ja".equals(PlayerAnswer) & !"nej".equals(PlayerAnswer)) {
+                System.out.println("Jeg forstår ikke hvad du mener, svar venligst med 'ja' eller 'nej'.");
+                System.out.print("Svar" + "\n" + "> ");
+                PlayerAnswer = reader.nextLine();
+            }
+            if ("yes".equals(PlayerAnswer)) {
+                System.out.println("Du har svaret: " + PlayerAnswer);
+            }
+        }
+    }  //end of scanner
 
     //Fitness
 
     //Rygeskur
+    @FXML
+    private Button btn1;
+    @FXML
+    private Button btnBack;
+    @FXML
+    private Button btn2;
+
+    @FXML
+    public void handleButtonEvent(ActionEvent event) throws IOException {
+        Stage stage;
+        Parent root;
+        if (event.getSource() == btn1) {
+            // Gør at når der klikkes på btn1 popper PopUpBoxRyge filen op.
+            stage = new Stage();
+            root = FXMLLoader.load(getClass().getResource("PopUpBoxRyge.fxml"));
+            stage.setScene(new Scene(root));
+            //Nedestående er så det bliver et pop-up
+            stage.initModality(Modality.APPLICATION_MODAL);
+            //Nedestående reminder "pop-up scenen" om, hvem der var den originale owner.
+            stage.initOwner(btn1.getScene().getWindow());
+            //Nedstående er til at den popper op og venter, indtil vi dismisser den
+            stage.showAndWait();
+        } else if (event.getSource() == btn2) {
+                // Gør at når der klikkes på btn1 popper PopUpBoxRyge filen op.
+                stage = new Stage();
+                root = FXMLLoader.load(getClass().getResource("PopUpBoxDrugs.fxml"));
+                stage.setScene(new Scene(root));
+                //Nedestående er så det bliver et pop-up
+                stage.initModality(Modality.APPLICATION_MODAL);
+                //Nedestående reminder "pop-up scenen" om, hvem der var den originale owner.
+                stage.initOwner(btn2.getScene().getWindow());
+                //Nedstående er til at den popper op og venter, indtil vi dismisser den
+                stage.showAndWait();
+        } else {
+            stage = (Stage) btnBack.getScene().getWindow();
+            stage.close();
+        }
+    }
+
 
     //pop-up boks
 
     //Drikke
-    //@FXML
-    //private void
-
 
     //Kantine
-    //@FXML
-    private void updateAll(){
+    @FXML
+    private void updateAll() {
         updatePlayerStats();
     }
 
     @FXML
-    private void updatePlayerStats(){
-        //Player.setHeart(50);
+    private void updatePlayerStats() {
+        Player.setHeart(30);
         //this.heart.setText();
-        //this.pancreas.setText(Player.setYesPancreas(0.1));
-        this.pancreas.setText(String.valueOf(player.getPancreas() + player.getYesPancreas()));
-        factsInfo = new Text("Velkommen");
-    }
-
-
-    @FXML
-    private void setText(){
-    //factsInfo = new Text("Velkommen");
+        this.pancreas.setText("" + Player);
     }
 
 
