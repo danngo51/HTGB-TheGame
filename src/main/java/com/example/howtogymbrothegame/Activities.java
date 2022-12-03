@@ -211,7 +211,6 @@ public class Activities {
 
     @FXML
     private void updatePlayerStats() {
-        player.setHeart(30);
         //this.heart.setText();
         this.pancreas.setText("" + player);
     }
