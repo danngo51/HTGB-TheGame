@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.Group?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
@@ -35,6 +37,11 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="131.0" layoutY="212.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="34.0" layoutY="212.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="34.0" layoutY="46.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <ImageView fx:id="lockFriday" fitHeight="168.0" fitWidth="171.0" layoutX="34.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Images/Lock.png" />
+               </image>
+            </ImageView>
          </children>
       </Group>
       <Group layoutX="683.0" layoutY="270.0" onMouseClicked="#switchToSaturday">
@@ -45,6 +52,11 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="131.0" layoutY="212.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="34.0" layoutY="212.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="34.0" layoutY="46.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <ImageView fx:id="lockSaturday" fitHeight="168.0" fitWidth="171.0" layoutX="34.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Images/Lock.png" />
+               </image>
+            </ImageView>
          </children>
       </Group>
       <Group layoutX="985.0" layoutY="270.0" onMouseClicked="#switchToSunday">
@@ -55,6 +67,11 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="131.0" layoutY="212.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="34.0" layoutY="212.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="34.0" layoutY="46.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <ImageView fx:id="lockSunday" fitHeight="168.0" fitWidth="171.0" layoutX="36.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Images/Lock.png" />
+               </image>
+            </ImageView>
          </children>
       </Group>
    </children>

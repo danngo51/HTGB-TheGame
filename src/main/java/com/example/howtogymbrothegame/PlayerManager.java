@@ -1,6 +1,21 @@
 package com.example.howtogymbrothegame;
 
 public class PlayerManager {
+    private PlayerManager(double lungs, double heart, double liver, double pancreas){
+       this.lungs = lungs;
+       this.heart = heart;
+       this.liver = liver;
+       this.pancreas = pancreas;
+
+    }
+
+    private static final PlayerManager instance = new PlayerManager(50, 50, 50, 50);
+
+    public static PlayerManager getInstance(){
+        return instance;
+    }
+
+
     //ATTRIBUTES
     //Stats
     private double lungs;
@@ -36,16 +51,6 @@ public class PlayerManager {
     private double yesAllPancreas;
     private double noAllPancreas;
 
-
-    //Constructor for player
-    //A player is created in 'Room'
-    public PlayerManager(double lungs, double heart, double liver,
-                         double pancreas) {
-        this.lungs = lungs;
-        this.heart = heart;
-        this.liver = liver;
-        this.pancreas = pancreas;
-    } //end of PlayerManager
 
 
     @Override

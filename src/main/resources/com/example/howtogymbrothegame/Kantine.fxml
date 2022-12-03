@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.TextFlow?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.howtogymbrothegame.Activities">
    <children>
@@ -67,7 +67,7 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <TextFlow fx:id="factsInfo" layoutX="30.0" layoutY="215.0" prefHeight="480.0" prefWidth="240.0" />
+            <Text fx:id="factsInfo" layoutX="39.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="209.962158203125" />
          </children>
       </Pane>
       <Pane fx:id="bigPane" prefHeight="720.0" prefWidth="980.0">
@@ -84,7 +84,7 @@
                </image>
             </ImageView>
             <ImageView fx:id="doorHandleCanteen" fitHeight="94.0" fitWidth="34.0" layoutX="449.0" layoutY="319.0" onMouseClicked="#switchtoWeekDays" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="burger" fitHeight="500.0" fitWidth="500.0" layoutX="250.0" layoutY="303.0" onMouseClicked="#updateAll" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="burger" fitHeight="500.0" fitWidth="500.0" layoutX="250.0" layoutY="303.0" onMouseClicked="#updatePlayerStats" pickOnBounds="true" preserveRatio="true" />
          </children>
       </Pane>
    </children>
