@@ -2,7 +2,8 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.AnchorPane?>
 
 
@@ -10,8 +11,13 @@
    <children>
       <Label layoutX="54.0" layoutY="10.0" text="Kunne du tænkte dig at tage stoffer?" />
       <Label layoutX="15.0" layoutY="30.0" text="Læs faktaboks for konsekvenerne for din handling" />
-      <Slider layoutX="15.0" layoutY="54.0" majorTickUnit="10.0" max="40.0" minorTickCount="5" prefHeight="17.0" prefWidth="270.0" showTickLabels="true" showTickMarks="true" />
       <Label layoutX="9.0" layoutY="100.0" text="Stats: drugs vil forudsagde -1 point på alle dine stats" />
       <Button fx:id="btnBack" layoutX="120.0" layoutY="122.0" mnemonicParsing="false" onAction="#handleButtonEvent" prefHeight="13.0" prefWidth="59.0" text="Tilbage" />
+      <RadioButton layoutX="60.0" layoutY="65.0" mnemonicParsing="false" text="yes">
+         <toggleGroup>
+            <ToggleGroup fx:id="tageStoffer" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="200.0" layoutY="65.0" mnemonicParsing="false" text="no" toggleGroup="$tageStoffer" />
    </children>
 </AnchorPane>

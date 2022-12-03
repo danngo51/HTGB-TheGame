@@ -5,7 +5,6 @@
 <?import javafx.scene.control.Slider?>
 <?import javafx.scene.layout.AnchorPane?>
 
-
 <AnchorPane prefHeight="150.0" prefWidth="300.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.howtogymbrothegame.Activities">
    <children>
       <Label layoutX="15.0" layoutY="10.0" text="Hvor mange cigaretter kunne du tænke dig at ryge?" />
