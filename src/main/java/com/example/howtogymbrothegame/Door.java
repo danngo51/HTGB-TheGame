@@ -8,10 +8,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -54,7 +52,7 @@ public class Door {
         root = canteenLoader.load();
 
         Activities canteen = canteenLoader.getController();
-        canteen.displaystats(pancreasVal, liverVal, heartVal, lungsVal);
+        canteen.displayStats(pancreasVal, liverVal, heartVal, lungsVal);
 
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -68,7 +66,7 @@ public class Door {
         root = fitnessLoader.load();
 
         Activities fitness = fitnessLoader.getController();
-        fitness.displaystats(pancreasVal, liverVal, heartVal, lungsVal);
+        fitness.displayStats(pancreasVal, liverVal, heartVal, lungsVal);
 
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -82,7 +80,7 @@ public class Door {
         root = smokingLoader.load();
 
         Activities smoking = smokingLoader.getController();
-        smoking.displaystats(pancreasVal, liverVal, heartVal, lungsVal);
+        smoking.displayStats(pancreasVal, liverVal, heartVal, lungsVal);
 
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -96,7 +94,7 @@ public class Door {
         root = drinkingLoader.load();
 
         Activities drinking = drinkingLoader.getController();
-        drinking.displaystats(pancreasVal, liverVal, heartVal, lungsVal);
+        drinking.displayStats(pancreasVal, liverVal, heartVal, lungsVal);
 
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);

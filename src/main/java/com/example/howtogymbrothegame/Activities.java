@@ -12,7 +12,6 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Scanner;
 
 public class Activities {
 
@@ -20,7 +19,7 @@ public class Activities {
     private Stage stage;
     private Scene scene;
 
-    //Labels
+    //Labels in the activity rooms
     @FXML
     private Label pancreas;
     @FXML
@@ -30,14 +29,16 @@ public class Activities {
     @FXML
     private Label lungs;
 
+    //Connection to PlayerManager
+    PlayerManager player = PlayerManager.getInstance();
 
-
-    public void infoSmoking() {
-        System.out.println("Langvarig rygning på mellem 1-4 cigaretter dagligt vil signifikant øge risikoen for at dø af hjertesygdomme.");
-        System.out.println("Konsekvenserne ved for højt tobaksindtag kan føre til iskæmi, som nedsætter blodtilgang til dele af hjertemusklen.");
-        System.out.println("Dette kan derudover føre til adskillige former for cancer.");
-        System.out.println("Rygning øger også risikoen for lungekræft og kronisk obstruktiv lungesygdom (KOL).");
-        System.out.println("Vil du virkelig udsætte dig selv for det?");
+    //This has to be public, so it can be used in other classes.
+    //This methode is used to update the player stats
+    public void displayStats(String pancreasVal, String liverVal, String heartVal, String lungsVal) {
+        pancreas.setText(pancreasVal);
+        liver.setText(liverVal);
+        heart.setText(heartVal);
+        lungs.setText(lungsVal);
     }
 
     @FXML
@@ -47,6 +48,15 @@ public class Activities {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+
+    public void infoSmoking() {
+        System.out.println("Langvarig rygning på mellem 1-4 cigaretter dagligt vil signifikant øge risikoen for at dø af hjertesygdomme.");
+        System.out.println("Konsekvenserne ved for højt tobaksindtag kan føre til iskæmi, som nedsætter blodtilgang til dele af hjertemusklen.");
+        System.out.println("Dette kan derudover føre til adskillige former for cancer.");
+        System.out.println("Rygning øger også risikoen for lungekræft og kronisk obstruktiv lungesygdom (KOL).");
+        System.out.println("Vil du virkelig udsætte dig selv for det?");
     }
 
     public void smokingAsk() {
@@ -164,7 +174,7 @@ public class Activities {
      * using 'PlayerAnswer' to determine how the player
      * stat should be effected.
      */
-    PlayerManager player = PlayerManager.getInstance();
+
     //Fitness
 
     //Rygeskur
@@ -213,15 +223,6 @@ public class Activities {
     //Drikke
 
     //Kantine
-
-
-
-    public void displaystats(String pancreasVal, String liverVal, String heartVal, String lungsVal) {
-        pancreas.setText(pancreasVal);
-        liver.setText(liverVal);
-        heart.setText(heartVal);
-        lungs.setText(lungsVal);
-    }
 
     @FXML
     private void updatePlayerStats() {
