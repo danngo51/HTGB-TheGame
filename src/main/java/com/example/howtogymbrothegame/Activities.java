@@ -213,6 +213,7 @@ public class Activities {
     private void updatePlayerStats() {
         //this.heart.setText();
         this.pancreas.setText("" + player);
+        hej med dig;
     }
 
 
