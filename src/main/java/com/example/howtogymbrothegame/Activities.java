@@ -20,8 +20,17 @@ public class Activities {
     private Stage stage;
     private Scene scene;
 
+    //Labels
     @FXML
-    private Label heart, pancreas, lungs, liver;
+    private Label pancreas;
+    @FXML
+    private Label liver;
+    @FXML
+    private Label heart;
+    @FXML
+    private Label lungs;
+
+
 
     public void infoSmoking() {
         System.out.println("Langvarig rygning på mellem 1-4 cigaretter dagligt vil signifikant øge risikoen for at dø af hjertesygdomme.");
@@ -204,16 +213,21 @@ public class Activities {
     //Drikke
 
     //Kantine
-    @FXML
-    private void updateAll() {
-        updatePlayerStats();
+
+
+
+    public void displaystats(String pancreasVal, String liverVal, String heartVal, String lungsVal) {
+        pancreas.setText(pancreasVal);
+        liver.setText(liverVal);
+        heart.setText(heartVal);
+        lungs.setText(lungsVal);
     }
 
     @FXML
     private void updatePlayerStats() {
         //this.heart.setText();
-        this.pancreas.setText("" + player);
-        hej med dig;
+        player.setPancreas(player.getNoPancreas());
+        this.pancreas.setText(String.valueOf(player.getPancreas()));
     }
 
 

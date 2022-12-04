@@ -21,12 +21,23 @@ public class Door {
     private Scene scene;
     private Parent root;
 
+    PlayerManager player = PlayerManager.getInstance();
+
+
     @FXML
     ImageView lockFriday;
     @FXML
     ImageView lockSaturday;
     @FXML
     ImageView lockSunday;
+
+    //Method to update player stats
+    String pancreasVal = String.valueOf(player.getPancreas());
+    String liverVal = String.valueOf(player.getLiver());
+    String heartVal = String.valueOf(player.getHeart());
+    String lungsVal = String.valueOf(player.getLungs());
+
+
 
     //Method to change scenes/doors
     public void switchToMainHub(ActionEvent event) throws IOException {
@@ -39,7 +50,12 @@ public class Door {
 
 
     public void switchToCanteen(MouseEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("Kantine.fxml"));
+        FXMLLoader canteenLoader = new FXMLLoader(getClass().getResource("Kantine.fxml"));
+        root = canteenLoader.load();
+
+        Activities canteen = canteenLoader.getController();
+        canteen.displaystats(pancreasVal, liverVal, heartVal, lungsVal);
+
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -48,7 +64,12 @@ public class Door {
     }
 
     public void switchToFitness(MouseEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("Fitness.fxml"));
+        FXMLLoader fitnessLoader = new FXMLLoader(getClass().getResource("Fitness.fxml"));
+        root = fitnessLoader.load();
+
+        Activities fitness = fitnessLoader.getController();
+        fitness.displaystats(pancreasVal, liverVal, heartVal, lungsVal);
+
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -57,7 +78,12 @@ public class Door {
     }
 
     public void switchToSmoking(MouseEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("Rygeskur.fxml"));
+        FXMLLoader smokingLoader = new FXMLLoader(getClass().getResource("Rygeskur.fxml"));
+        root = smokingLoader.load();
+
+        Activities smoking = smokingLoader.getController();
+        smoking.displaystats(pancreasVal, liverVal, heartVal, lungsVal);
+
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -66,7 +92,12 @@ public class Door {
     }
 
     public void switchToDrinking(MouseEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("Drikke.fxml"));
+        FXMLLoader drinkingLoader = new FXMLLoader(getClass().getResource("Drikke.fxml"));
+        root = drinkingLoader.load();
+
+        Activities drinking = drinkingLoader.getController();
+        drinking.displaystats(pancreasVal, liverVal, heartVal, lungsVal);
+
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);

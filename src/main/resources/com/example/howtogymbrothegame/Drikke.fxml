@@ -46,22 +46,22 @@
                     <Font size="15.0" />
                 </font>
             </Label>
-            <Label layoutX="235.0" layoutY="40.0" text="Label">
+            <Label fx:id="heart" layoutX="235.0" layoutY="40.0" text="Label">
                 <font>
                     <Font size="15.0" />
                 </font>
             </Label>
-            <Label layoutX="235.0" layoutY="70.0" text="Label">
+            <Label fx:id="lungs" layoutX="235.0" layoutY="70.0" text="Label">
                 <font>
                     <Font size="15.0" />
                 </font>
             </Label>
-            <Label layoutX="235.0" layoutY="100.0" text="Label">
+            <Label fx:id="liver" layoutX="235.0" layoutY="100.0" text="Label">
                 <font>
                     <Font size="15.0" />
                 </font>
             </Label>
-            <Label layoutX="235.0" layoutY="130.0" text="Label">
+            <Label fx:id="pancreas" layoutX="235.0" layoutY="130.0" text="Label">
                 <font>
                     <Font size="15.0" />
                 </font>
