@@ -1,14 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.howtogymbrothegame.Kantine"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.howtogymbrothegame.Activities">
+   <children>
+      <Pane fx:id="smallPane" layoutX="980.0" prefHeight="720.0" prefWidth="300.0">
+         <children>
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="DODGERBLUE" height="150.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeLineCap="ROUND" strokeType="INSIDE" width="280.0" />
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="DODGERBLUE" height="540.0" layoutX="10.0" layoutY="170.0" stroke="BLACK" strokeType="INSIDE" width="280.0" />
+            <Label layoutX="100.0" layoutY="15.0" text="Player stats">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="104.0" layoutY="175.0" text="Faktaboks">
+               <font>
+                  <Font name="System Bold Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="40.0" text="Hjerte: ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="70.0" text="Lunger: ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="100.0" text="Lever: ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="30.0" layoutY="130.0" text="Bugspytskirtel: ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="heart" layoutX="235.0" layoutY="40.0" text="50.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="lungs" layoutX="235.0" layoutY="70.0" text="50.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="liver" layoutX="235.0" layoutY="100.0" text="50.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="pancreas" layoutX="235.0" layoutY="130.0" text="50.0">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Text fx:id="factsInfo" layoutX="39.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="209.962158203125" />
+         </children>
+      </Pane>
+      <Pane fx:id="bigPane" prefHeight="720.0" prefWidth="980.0">
+         <children>
+            <Button fx:id="CanteenExitbutton" layoutX="-23.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchtoWeekDays" prefHeight="7.0" prefWidth="100.0" rotate="-90.0" text="EXIT">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Group layoutX="360.0" layoutY="306.0" />
+            <ImageView fitHeight="720.0" fitWidth="980.0">
+               <image>
+                  <Image url="@../../../../../Images/RestaurantInterior.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="doorHandleCanteen" fitHeight="94.0" fitWidth="34.0" layoutX="449.0" layoutY="319.0" onMouseClicked="#switchtoWeekDays" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="burger" fitHeight="500.0" fitWidth="500.0" layoutX="250.0" layoutY="303.0" onMouseClicked="#updatePlayerStats" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+   </children>
 </AnchorPane>

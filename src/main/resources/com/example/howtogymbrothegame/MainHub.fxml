@@ -1,13 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.howtogymbrothegame.Door">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.howtogymbrothegame.Door">
    <children>
-      <Label layoutX="206.0" layoutY="112.0" text="Go to scene 2" />
-      <Button layoutX="215.0" layoutY="129.0" mnemonicParsing="false" onAction="#switchToScene2" text="Scene2" />
+      <Text layoutX="400.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Velkommen til How To Gymbro!" wrappingWidth="501.3357238769531">
+         <font>
+            <Font size="35.0" />
+         </font></Text>
+      <Text layoutX="108.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dette spil hjælper dig med at forstå konsekvenserne af dine daglige livsstilsvalg. Hvert rum giver dig adskillige valg du skal træffe. Dine valgmuligheder består af gode og dårlige valg for dit helbred. Hvert valg du træffer kommer til at have en indvirkning på dit liv. Vælg omhyggeligt!" wrappingWidth="1095.1493682861328">
+         <font>
+            <Font size="20.0" />
+         </font></Text>
+      <Group layoutX="80.0" layoutY="270.0" onMouseClicked="#switchToMTT">
+         <children>
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#cd5900" height="346.0" layoutX="12.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="216.0" />
+            <Circle fill="#eeff00" layoutX="209.0" layoutY="194.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="131.0" layoutY="46.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="131.0" layoutY="212.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="34.0" layoutY="212.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="34.0" layoutY="46.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+         </children>
+      </Group>
+      <Group layoutX="380.0" layoutY="270.0" onMouseClicked="#switchToFriday">
+         <children>
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#cd5900" height="346.0" layoutX="12.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="216.0" />
+            <Circle fill="#eeff00" layoutX="209.0" layoutY="194.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="131.0" layoutY="46.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="131.0" layoutY="212.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="34.0" layoutY="212.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="34.0" layoutY="46.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <ImageView fx:id="lockFriday" fitHeight="168.0" fitWidth="171.0" layoutX="34.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:src/Images/Lock.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Group>
+      <Group layoutX="683.0" layoutY="270.0" onMouseClicked="#switchToSaturday">
+         <children>
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#cd5900" height="346.0" layoutX="12.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="216.0" />
+            <Circle fill="#eeff00" layoutX="209.0" layoutY="194.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="131.0" layoutY="46.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="131.0" layoutY="212.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="34.0" layoutY="212.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="34.0" layoutY="46.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <ImageView fx:id="lockSaturday" fitHeight="168.0" fitWidth="171.0" layoutX="34.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:src/Images/Lock.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Group>
+      <Group layoutX="985.0" layoutY="270.0" onMouseClicked="#switchToSunday">
+         <children>
+            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#cd5900" height="346.0" layoutX="12.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="216.0" />
+            <Circle fill="#eeff00" layoutX="209.0" layoutY="194.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="131.0" layoutY="46.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="131.0" layoutY="212.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="34.0" layoutY="212.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="34.0" layoutY="46.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
+            <ImageView fx:id="lockSunday" fitHeight="168.0" fitWidth="171.0" layoutX="36.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:src/Images/Lock.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Group>
+      <Button fx:id="logoutButton" layoutX="1176.0" layoutY="42.0" mnemonicParsing="false" onMouseClicked="#logout" text="Log ud" />
    </children>
 </AnchorPane>

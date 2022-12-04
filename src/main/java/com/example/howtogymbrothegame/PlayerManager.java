@@ -1,6 +1,21 @@
 package com.example.howtogymbrothegame;
 
 public class PlayerManager {
+    private PlayerManager(double lungs, double heart, double liver, double pancreas){
+       this.lungs = lungs;
+       this.heart = heart;
+       this.liver = liver;
+       this.pancreas = pancreas;
+
+    }
+
+    private static final PlayerManager instance = new PlayerManager(50, 50, 50, 50);
+
+    public static PlayerManager getInstance(){
+        return instance;
+    }
+
+
     //ATTRIBUTES
     //Stats
     private double lungs;
@@ -37,21 +52,11 @@ public class PlayerManager {
     private double noAllPancreas;
 
 
-    //Constructor for player
-    //A player is created in 'Room'
-    public PlayerManager(double lungs, double heart, double liver,
-                         double pancreas) {
-        this.lungs = lungs;
-        this.heart = heart;
-        this.liver = liver;
-        this.pancreas = pancreas;
-    } //end of PlayerManager
-
 
     @Override
     public String toString() {
-        return "Player stats:" + "heart=" + heart +
-                "lungs=" + lungs + ", liver=" + liver + "pancreas=" + pancreas;
+        return "Spiller stats:" + "hjerte=" + heart +
+                "lunger=" + lungs + ", lever=" + liver + "bugspytkirtlen=" + pancreas;
     } // end of toString
 
 
@@ -151,14 +156,14 @@ public class PlayerManager {
     //but when it gets printed out it looks better
     public void getPlayerStats() {
         System.out.println();
-        System.out.println("---------------------------------");
-        System.out.println("|  Here are your current stats: |");
-        System.out.println("---------------------------------");
+        System.out.println("--------------------------------");
+        System.out.println("| Her er dine nuværende stats: |");
+        System.out.println("--------------------------------");
         System.out.println("| Lunger:          "+getLungs()+"        |");
         System.out.println("| Hjerte:          "+getHeart()+"        |");
         System.out.println("| Lever:           "+getLiver()+"        |");
         System.out.println("| Bugspytkirtel:   "+getPancreas()+"        |");
-        System.out.println("---------------------------------");
+        System.out.println("--------------------------------");
     }
     //GETTERS
     /*The math.round and *100.0 /100.0, is an easy fix to rounding.

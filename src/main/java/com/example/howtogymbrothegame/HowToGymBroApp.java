@@ -9,6 +9,7 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 
 public class HowToGymBroApp extends Application {
     @Override
@@ -24,8 +25,6 @@ public class HowToGymBroApp extends Application {
 
         //window tittle
         stage.setTitle("How To Gym Bro");
-
-
         stage.show();
     }
 

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="150.0" prefWidth="300.0" style="-fx-background-color: orange;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.howtogymbrothegame.Activities">
+   <children>
+      <Label layoutX="54.0" layoutY="10.0" text="Kunne du tænkte dig at tage stoffer?" />
+      <Label layoutX="15.0" layoutY="30.0" text="Læs faktaboks for konsekvenerne for din handling" />
+      <Label layoutX="9.0" layoutY="100.0" text="Stats: drugs vil forudsagde -1 point på alle dine stats" />
+      <Button fx:id="btnBack" layoutX="120.0" layoutY="122.0" mnemonicParsing="false" onAction="#handleButtonEvent" prefHeight="13.0" prefWidth="59.0" text="Tilbage" />
+      <RadioButton layoutX="60.0" layoutY="65.0" mnemonicParsing="false" text="yes">
+         <toggleGroup>
+            <ToggleGroup fx:id="tageStoffer" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="200.0" layoutY="65.0" mnemonicParsing="false" text="no" toggleGroup="$tageStoffer" />
+   </children>
+</AnchorPane>
