@@ -31,7 +31,7 @@ public class Door {
     @FXML
     ImageView lockSunday;
 
-    //Method to update player stats
+    //Variables to update player stats
     String pancreasVal = String.valueOf(player.getPancreas());
     String liverVal = String.valueOf(player.getLiver());
     String heartVal = String.valueOf(player.getHeart());
