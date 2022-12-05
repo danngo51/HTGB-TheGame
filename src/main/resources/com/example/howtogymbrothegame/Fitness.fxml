@@ -88,6 +88,16 @@
                   <Image url="file:src/Images/Boylifting.gif" />
                </image>
             </ImageView>
+            <ImageView fitHeight="333.0" fitWidth="274.0" layoutX="26.0" layoutY="398.0" onMouseClicked="#exercise" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:src/Images/Treadmill.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="722.0" fitWidth="113.0" layoutX="191.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:src/Images/Pillargym.png" />
+               </image>
+            </ImageView>
          </children>
       </Pane>
    </children>
