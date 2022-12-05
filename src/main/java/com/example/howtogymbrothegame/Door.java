@@ -39,7 +39,20 @@ public class Door {
 
     //Method to change scenes/doors
     public void switchToMainHub(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("MainHub.fxml"));
+        FXMLLoader mainhubLoader = new FXMLLoader(getClass().getResource("MainHub.fxml"));
+        root = mainhubLoader.load();
+
+        Door mainhub = mainhubLoader.getController();
+        if(access.isAccessFriday()){
+           mainhub.lockFriday.setVisible(false);
+        }
+        if (access.isAccessSaturday()){
+            mainhub.lockSaturday.setVisible(false);
+        }
+        if (access.isAccessSunday()){
+            mainhub.lockSunday.setVisible(false);
+        }
+
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
