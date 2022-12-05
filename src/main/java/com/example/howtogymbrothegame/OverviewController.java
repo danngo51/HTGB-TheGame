@@ -38,8 +38,6 @@ public class OverviewController {
     }
 
 
-
-
     //Attributes and methods for tab2
     @FXML
     private Tab stats3mo;
@@ -53,13 +51,11 @@ public class OverviewController {
     private Label pancreasOverview3mo;
 
     private void overviewTab2(){
-        heartOverview3mo.setText(String.valueOf(playerOverview.getHeart()));
-        lungsOverview3mo.setText(String.valueOf(playerOverview.getLungs()));
-        liverOverview3mo.setText(String.valueOf(playerOverview.getLiver()));
-        pancreasOverview3mo.setText(String.valueOf(playerOverview.getPancreas()));
+        heartOverview3mo.setText(String.valueOf(playerOverview.getHeart3mo()));
+        lungsOverview3mo.setText(String.valueOf(playerOverview.getLungs3mo()));
+        liverOverview3mo.setText(String.valueOf(playerOverview.getLiver3mo()));
+        pancreasOverview3mo.setText(String.valueOf(playerOverview.getPancreas3mo()));
     }
-
-
 
 
     //Attributes and methods for tab3
@@ -75,10 +71,10 @@ public class OverviewController {
     private Label pancreasOverview6mo;
 
     private void overviewTab3(){
-        heartOverview6mo.setText(String.valueOf(playerOverview.getHeart()));
-        lungsOverview6mo.setText(String.valueOf(playerOverview.getLungs()));
-        liverOverview6mo.setText(String.valueOf(playerOverview.getLiver()));
-        pancreasOverview6mo.setText(String.valueOf(playerOverview.getPancreas()));
+        heartOverview6mo.setText(String.valueOf(playerOverview.getHeart6mo()));
+        lungsOverview6mo.setText(String.valueOf(playerOverview.getLungs6mo()));
+        liverOverview6mo.setText(String.valueOf(playerOverview.getLiver6mo()));
+        pancreasOverview6mo.setText(String.valueOf(playerOverview.getPancreas6mo()));
     }
 
 
@@ -96,10 +92,10 @@ public class OverviewController {
     private Label pancreasOverview9mo;
 
     private void overviewTab4(){
-        heartOverview9mo.setText(String.valueOf(playerOverview.getHeart()));
-        lungsOverview9mo.setText(String.valueOf(playerOverview.getLungs()));
-        liverOverview9mo.setText(String.valueOf(playerOverview.getLiver()));
-        pancreasOverview9mo.setText(String.valueOf(playerOverview.getPancreas()));
+        heartOverview9mo.setText(String.valueOf(playerOverview.getHeart9mo()));
+        lungsOverview9mo.setText(String.valueOf(playerOverview.getLungs9mo()));
+        liverOverview9mo.setText(String.valueOf(playerOverview.getLiver9mo()));
+        pancreasOverview9mo.setText(String.valueOf(playerOverview.getPancreas9mo()));
     }
 
 
@@ -117,10 +113,10 @@ public class OverviewController {
     private Label pancreasOverview12mo;
 
     private void overviewTab5(){
-        heartOverview12mo.setText(String.valueOf(playerOverview.getHeart()));
-        lungsOverview12mo.setText(String.valueOf(playerOverview.getLungs()));
-        liverOverview12mo.setText(String.valueOf(playerOverview.getLiver()));
-        pancreasOverview12mo.setText(String.valueOf(playerOverview.getPancreas()));
+        heartOverview12mo.setText(String.valueOf(playerOverview.getHeart12mo()));
+        lungsOverview12mo.setText(String.valueOf(playerOverview.getLungs12mo()));
+        liverOverview12mo.setText(String.valueOf(playerOverview.getLiver12mo()));
+        pancreasOverview12mo.setText(String.valueOf(playerOverview.getPancreas12mo()));
     }
 
 }

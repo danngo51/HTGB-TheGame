@@ -249,4 +249,87 @@ public class PlayerManager {
     public double getNoAllPancreas() {
         return noAllPancreas;
     }
+
+
+
+    //Attributes and methods to show progress over the months
+    //3 months
+    private double lungs3mo = 3;
+    private double heart3mo = 3;
+    private double liver3mo = 3;
+    private double pancreas3mo = 3;
+
+    //6 months
+    private double lungs6mo = 6;
+    private double heart6mo = 6;
+    private double liver6mo = 6;
+    private double pancreas6mo = 6;
+
+    //9 months
+    private double lungs9mo = 9;
+    private double heart9mo = 9;
+    private double liver9mo = 9;
+    private double pancreas9mo = 9;
+
+    //12 months
+    private double lungs12mo = 12;
+    private double heart12mo = 12;
+    private double liver12mo = 12;
+    private double pancreas12mo = 12;
+
+    //3 months - getters
+    public double getLungs3mo() {
+        return lungs3mo;
+    }
+    public double getHeart3mo() {
+        return heart3mo;
+    }
+    public double getLiver3mo() {
+        return liver3mo;
+    }
+    public double getPancreas3mo() {
+        return pancreas3mo;
+    }
+
+    //6 months - getters
+    public double getLungs6mo() {
+        return lungs6mo;
+    }
+    public double getHeart6mo() {
+        return heart6mo;
+    }
+    public double getLiver6mo() {
+        return liver6mo;
+    }
+    public double getPancreas6mo() {
+        return pancreas6mo;
+    }
+
+    //9 months - getters
+    public double getLungs9mo() {
+        return lungs9mo;
+    }
+    public double getHeart9mo() {
+        return heart9mo;
+    }
+    public double getLiver9mo() {
+        return liver9mo;
+    }
+    public double getPancreas9mo() {
+        return pancreas9mo;
+    }
+
+    //12 months - getters
+    public double getLungs12mo() {
+        return lungs12mo;
+    }
+    public double getHeart12mo() {
+        return heart12mo;
+    }
+    public double getLiver12mo() {
+        return liver12mo;
+    }
+    public double getPancreas12mo() {
+        return pancreas12mo;
+    }
 } //end of class
