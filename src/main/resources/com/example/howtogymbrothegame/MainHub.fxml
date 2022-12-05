@@ -75,6 +75,9 @@
             </ImageView>
          </children>
       </Group>
-      <Button fx:id="logoutButton" layoutX="1176.0" layoutY="42.0" mnemonicParsing="false" onMouseClicked="#logout" text="Log ud" />
+      <Button fx:id="logoutButton" layoutX="1105.0" layoutY="22.0" mnemonicParsing="false" onAction="#overviewButton" onMouseClicked="#logout" prefHeight="86.0" prefWidth="153.0" text="Overview">
+         <font>
+            <Font size="26.0" />
+         </font></Button>
    </children>
 </AnchorPane>

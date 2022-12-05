@@ -227,4 +227,18 @@ public class Door {
 
     }
 
+    public void overviewButton(ActionEvent event) throws IOException{
+        //load stage
+        FXMLLoader overviewLoader = new FXMLLoader(getClass().getResource("Overview.fxml"));
+        root = overviewLoader.load();
+
+        OverviewController overview = overviewLoader.getController();
+        overview.displayOverview();
+
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Søndag");
+        stage.show();
+    }
 }

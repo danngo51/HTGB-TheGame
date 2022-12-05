@@ -5,6 +5,19 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Tab;
 
 public class OverviewController {
+    //connection to PlayerManager
+    PlayerManager playerOverview = PlayerManager.getInstance();
+
+    //method to update all labels
+    public void displayOverview(){
+        overviewTab1();
+        overviewTab2();
+        overviewTab3();
+        overviewTab4();
+        overviewTab5();
+    }
+
+
     //Attributes and methods for tab1
     @FXML
     private Tab stats;
@@ -16,6 +29,16 @@ public class OverviewController {
     private Label liverOverview;
     @FXML
     private Label pancreasOverview;
+
+    private void overviewTab1(){
+        heartOverview.setText(String.valueOf(playerOverview.getHeart()));
+        lungsOverview.setText(String.valueOf(playerOverview.getLungs()));
+        liverOverview.setText(String.valueOf(playerOverview.getLiver()));
+        pancreasOverview.setText(String.valueOf(playerOverview.getPancreas()));
+    }
+
+
+
 
     //Attributes and methods for tab2
     @FXML
@@ -29,6 +52,16 @@ public class OverviewController {
     @FXML
     private Label pancreasOverview3mo;
 
+    private void overviewTab2(){
+        heartOverview3mo.setText(String.valueOf(playerOverview.getHeart()));
+        lungsOverview3mo.setText(String.valueOf(playerOverview.getLungs()));
+        liverOverview3mo.setText(String.valueOf(playerOverview.getLiver()));
+        pancreasOverview3mo.setText(String.valueOf(playerOverview.getPancreas()));
+    }
+
+
+
+
     //Attributes and methods for tab3
     @FXML
     private Tab stats6mo;
@@ -40,6 +73,15 @@ public class OverviewController {
     private Label liverOverview6mo;
     @FXML
     private Label pancreasOverview6mo;
+
+    private void overviewTab3(){
+        heartOverview6mo.setText(String.valueOf(playerOverview.getHeart()));
+        lungsOverview6mo.setText(String.valueOf(playerOverview.getLungs()));
+        liverOverview6mo.setText(String.valueOf(playerOverview.getLiver()));
+        pancreasOverview6mo.setText(String.valueOf(playerOverview.getPancreas()));
+    }
+
+
 
     //Attributes and methods for tab4
     @FXML
@@ -53,6 +95,15 @@ public class OverviewController {
     @FXML
     private Label pancreasOverview9mo;
 
+    private void overviewTab4(){
+        heartOverview9mo.setText(String.valueOf(playerOverview.getHeart()));
+        lungsOverview9mo.setText(String.valueOf(playerOverview.getLungs()));
+        liverOverview9mo.setText(String.valueOf(playerOverview.getLiver()));
+        pancreasOverview9mo.setText(String.valueOf(playerOverview.getPancreas()));
+    }
+
+
+
     //Attributes and methods for tab5
     @FXML
     private Tab stats12mo;
@@ -65,5 +116,11 @@ public class OverviewController {
     @FXML
     private Label pancreasOverview12mo;
 
+    private void overviewTab5(){
+        heartOverview12mo.setText(String.valueOf(playerOverview.getHeart()));
+        lungsOverview12mo.setText(String.valueOf(playerOverview.getLungs()));
+        liverOverview12mo.setText(String.valueOf(playerOverview.getLiver()));
+        pancreasOverview12mo.setText(String.valueOf(playerOverview.getPancreas()));
+    }
 
 }
