@@ -12,10 +12,31 @@
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="720" prefWidth="1280" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.howtogymbrothegame.DrikkeController">
+    <Pane prefHeight="720.0" prefWidth="980.0">
+        <children>
+         <Pane layoutX="-16.0" layoutY="-2.0" prefHeight="730.0" prefWidth="1302.0" style="-fx-background-color: #69233c;">
+            <children>
+               <ImageView fitHeight="759.0" fitWidth="980.0" layoutX="13.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="file:src/Images/BarUpdated.PNG" />
+                  </image>
+               </ImageView>
+               <ImageView fitHeight="77.0" fitWidth="19.0" layoutX="297.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="file:src/Images/BeerBottle.png" />
+                  </image>
+               </ImageView>
+               <ChoiceBox fx:id="myChoiceBox" layoutX="267.0" layoutY="396.0" minHeight="15.0" prefHeight="25.0" prefWidth="80.0" />
+               <Button layoutX="359.0" layoutY="396.0" mnemonicParsing="false" onAction="#submitBeer" text="Submit" />
+            </children>
+         </Pane>
+            <Button layoutX="-23.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchtoWeekDays" prefHeight="7.0" prefWidth="100.0" rotate="-90.0" text="EXIT" />
+        </children>
+    </Pane>
     <Pane layoutX="980.0" prefHeight="720.0" prefWidth="300.0">
         <children>
-            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="DODGERBLUE" height="150.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="280.0" />
-            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="DODGERBLUE" height="540.0" layoutX="10.0" layoutY="170.0" stroke="BLACK" strokeType="INSIDE" width="280.0" />
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#d76074" height="150.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="280.0" />
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#d76074" height="540.0" layoutX="10.0" layoutY="170.0" stroke="BLACK" strokeType="INSIDE" width="280.0" />
             <Label layoutX="100.0" layoutY="15.0" text="Player stats">
                 <font>
                     <Font name="System Bold Italic" size="20.0" />
@@ -71,23 +92,6 @@
                <Font size="15.0" />
             </font>
          </Text>
-        </children>
-    </Pane>
-    <Pane prefHeight="720.0" prefWidth="980.0">
-        <children>
-         <ImageView fitHeight="740.0" fitWidth="1003.0" layoutX="-1.0" layoutY="-14.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../../../../Images/bar2.PNG" />
-            </image>
-         </ImageView>
-            <Button layoutX="-23.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchtoWeekDays" prefHeight="7.0" prefWidth="100.0" rotate="-90.0" text="EXIT" />
-         <ImageView fitHeight="77.0" fitWidth="19.0" layoutX="280.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
-            <image>
-               <Image url="@../../../../../Images/BeerBottle.png" />
-            </image>
-         </ImageView>
-         <ChoiceBox fx:id="myChoiceBox" layoutX="250.0" layoutY="390.0" minHeight="15.0" prefHeight="21.0" prefWidth="80.0" />
-         <Button layoutX="335.0" layoutY="389.0" mnemonicParsing="false" onAction="#submitBeer" text="Submit" />
         </children>
     </Pane>
 </AnchorPane>
