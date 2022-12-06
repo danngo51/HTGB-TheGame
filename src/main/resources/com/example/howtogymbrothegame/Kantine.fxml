@@ -68,7 +68,7 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <Text fx:id="factsInfo" layoutX="39.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Velkommen til kantinen!&#10;&#10;Mad er en stor del af at være sund, derfor står du nu overfor et &#10;valg.&#10;&#10;Vælger du at spise sundt, som vil forbedree dine stats, eller vælger du at spise usundt, som vil negativt påvirke dine stats.&#10;&#10;&#10;&#10;&#10;" wrappingWidth="209.962158203125">
+            <Text fx:id="factsInfo" layoutX="39.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Velkommen til kantinen!&#10;&#10;Mad er en stor del af at være sund, derfor står du nu overfor et &#10;valg.&#10;&#10;Vælger du at spise sundt, som vil forbedre dine stats, eller vælger du at spise usundt, som vil negativt påvirke dine stats.&#10;&#10;Du kan vælge ved at klikke enten på burger menuen på burgermenuen eller måltidet på bordet.&#10;&#10;Derudover kan du ved klikke på bestillingensskærmen åbne et mini-game, der giver dig chancen for lidt ekstra point.&#10;&#10;&#10;&#10;&#10;&#10;" wrappingWidth="209.962158203125">
                <font>
                   <Font size="15.0" />
                </font></Text>
@@ -76,28 +76,28 @@
       </Pane>
       <Pane fx:id="bigPane" prefHeight="720.0" prefWidth="980.0">
          <children>
-            <Button fx:id="CanteenExitbutton" layoutX="-23.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchtoWeekDays" prefHeight="7.0" prefWidth="100.0" rotate="-90.0" text="EXIT">
-               <font>
-                  <Font size="15.0" />
-               </font>
-            </Button>
             <Group layoutX="360.0" layoutY="306.0" />
             <ImageView fitHeight="720.0" fitWidth="980.0">
                <image>
-                  <Image url="@../../../../../Images/RestaurantInterior.PNG" />
+                  <Image url="file:src/Images/RestaurantInterior.PNG" />
                </image>
             </ImageView>
             <ImageView fx:id="doorHandleCanteen" fitHeight="94.0" fitWidth="34.0" layoutX="449.0" layoutY="319.0" onMouseClicked="#switchtoWeekDays" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="burger" fitHeight="337.0" fitWidth="277.0" layoutX="250.0" layoutY="303.0" onMouseClicked="#eatingUnhealthy" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="burger" fitHeight="55.0" fitWidth="124.0" layoutX="240.0" layoutY="316.0" onMouseClicked="#eatingUnhealthy" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="healthy" fitHeight="130.0" fitWidth="246.0" layoutX="602.0" layoutY="327.0" onMouseClicked="#eatingHealthy" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Images/mealplate.png" />
+                  <Image url="file:src/Images/mealplate.png" />
                </image>
                <effect>
                   <Blend />
                </effect>
             </ImageView>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="319.0" layoutX="19.0" layoutY="102.0" onMouseClicked="#CanteenGame" stroke="BLACK" strokeType="INSIDE" width="141.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="319.0" layoutX="36.0" layoutY="102.0" onMouseClicked="#CanteenGame" stroke="TRANSPARENT" strokeType="INSIDE" width="124.0" />
+            <Button fx:id="CanteenExitbutton" mnemonicParsing="false" onAction="#switchtoWeekDays" prefHeight="7.0" prefWidth="100.0" text="EXIT">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
    </children>

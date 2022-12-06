@@ -17,16 +17,8 @@ public class CanteenGameController {
     private AnchorPane scenePane;
     PlayerManager player = PlayerManager.getInstance();
 
-    String pancreasVal = String.valueOf(player.getPancreas());
-    String liverVal = String.valueOf(player.getLiver());
-    String heartVal = String.valueOf(player.getHeart());
-    String lungsVal = String.valueOf(player.getLungs());
-
-    Activities stats = new Activities();
-
     @FXML
     private void closeGame() {
-        stats.displayStats(pancreasVal, liverVal, heartVal, lungsVal);
         stage = (Stage) scenePane.getScene().getWindow();
         stage.close();
     }
