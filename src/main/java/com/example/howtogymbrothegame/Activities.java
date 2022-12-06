@@ -3,12 +3,10 @@ package com.example.howtogymbrothegame;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import javafx.stage.Modality;
@@ -51,7 +49,7 @@ public class Activities {
     @FXML
     public void switchtoWeekDays(MouseEvent event) throws IOException {
         Door door = new Door();
-        door.test(event);
+        door.weekday(event);
     }
 
 

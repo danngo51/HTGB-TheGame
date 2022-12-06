@@ -4,9 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
@@ -87,7 +85,7 @@ public class DrikkeController implements Initializable {
     @FXML
     public void switchtoWeekDays(MouseEvent event) throws IOException {
         Door door = new Door();
-        door.test(event);
+        door.weekday(event);
     }
     @FXML
     private void drinkingBeer() {
