@@ -12,6 +12,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.text.Text;
+import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -34,7 +36,6 @@ public class DrikkeController implements Initializable {
     //Connection to PlayerManager
     PlayerManager player = PlayerManager.getInstance();
 
-    //This has to be public, so it can be used in other classes.
     //This methode is used to update the player stats
     public void displayStats(String pancreasVal, String liverVal, String heartVal, String lungsVal) {
         pancreas.setText(pancreasVal);
@@ -47,21 +48,28 @@ public class DrikkeController implements Initializable {
     @FXML
     private ChoiceBox<String> myChoiceBox;
     @FXML
-    private TextField valg;
+    private Text tekstDrikke;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loadData();
+        myChoiceBox.setValue("0 øl");
     }
 
     @FXML
     private void displayValue(ActionEvent event){
         String beer = myChoiceBox.getValue();
-        if (beer==null){
-            valg.setText("Vælg en af følgende valgmuligheder");
+        if (beer.equals("0 øl")){
+            tekstDrikke.setText("EEEEEE.");
         }
-        else{
-            valg.setText("Du har valgt at drikke "+beer);
+        else if (beer.equals("1 øl")){
+            tekstDrikke.setText("AAAAAA");
+        }
+        else if (beer.equals("2 øl")){
+            tekstDrikke.setText("UUUUU");
+        }
+        else {
+            tekstDrikke.setText("IIIIII");
         }
     }
     private void loadData(){

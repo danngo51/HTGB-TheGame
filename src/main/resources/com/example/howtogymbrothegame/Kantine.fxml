@@ -84,14 +84,14 @@
             <Group layoutX="360.0" layoutY="306.0" />
             <ImageView fitHeight="720.0" fitWidth="980.0">
                <image>
-                  <Image url="@../../../../../Images/RestaurantInterior.PNG" />
+                  <Image url="file:src/Images/RestaurantInterior.PNG" />
                </image>
             </ImageView>
             <ImageView fx:id="doorHandleCanteen" fitHeight="94.0" fitWidth="34.0" layoutX="449.0" layoutY="319.0" onMouseClicked="#switchtoWeekDays" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="burger" fitHeight="337.0" fitWidth="277.0" layoutX="250.0" layoutY="303.0" onMouseClicked="#eatingUnhealthy" pickOnBounds="true" preserveRatio="true" />
             <ImageView fx:id="healthy" fitHeight="130.0" fitWidth="246.0" layoutX="602.0" layoutY="327.0" onMouseClicked="#eatingHealthy" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Images/mealplate.png" />
+                  <Image url="file:src/Images/mealplate.png" />
                </image>
                <effect>
                   <Blend />
