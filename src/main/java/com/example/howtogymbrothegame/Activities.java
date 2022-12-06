@@ -232,6 +232,7 @@ public class Activities {
     private Text factsInfo;
 
 
+
     @FXML
     private void eatingUnhealthy(){
         String unHealthy = "Et langvarigt indtag af dårlig kost kan føre til adskillige sygdomme.\n \nKonsekvenserne ved en dårlig kost vil blandt andet føre til: \n \n";
@@ -245,7 +246,14 @@ public class Activities {
     }
     //Fitness
     @FXML
+    private Text factsinfo;
+
+
+    @FXML
     private void exercise(){
+        String exercise = "Regelmæssig fysisk aktivitet har mange helbredsfordele, eksempler kunne være: \n \n";
+        String exercise2 = "Øget lunge- og hjertefunktion og sænkning af risikoen for prædiabetes og hjertesygdomme. Det hjælper også med at forebygge sygdomme i muskler og led. Udover dette hjælper det også med at formindske tyktarmskræft, brystkræft og livmoderkræft.   \n \n";
+        String exercise3 = "Der er ikke nogen ulemper, så kom i gang makker!";
         player.setHeart(player.getNoHeart());
         this.heart.setText(String.valueOf(player.getHeart()));
 
@@ -257,7 +265,9 @@ public class Activities {
 
         player.setPancreas(player.getNoPancreas());
         this.pancreas.setText(String.valueOf(player.getPancreas()));
+        this.factsinfo.setText(exercise + exercise2 + exercise3);
     }
+
 
     @FXML
     private void eatingHealthy(){

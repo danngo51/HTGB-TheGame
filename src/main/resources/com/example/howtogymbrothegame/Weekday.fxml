@@ -22,7 +22,7 @@
             <Image url="file:src/Images/sidewalk.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="210.0" fitWidth="351.0" layoutX="-9.0" layoutY="286.0" onMouseClicked="#switchToFitness" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="210.0" fitWidth="351.0" layoutX="-9.0" layoutY="289.0" onMouseClicked="#switchToFitness" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="file:src/Images/Gym.png" />
          </image>
@@ -36,7 +36,7 @@
          <font>
             <Font size="24.0" />
          </font></Button>
-      <ImageView fitHeight="232.0" fitWidth="528.0" layoutX="436.0" layoutY="261.0" onMouseClicked="#switchToDrinking" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="232.0" fitWidth="528.0" layoutX="436.0" layoutY="265.0" onMouseClicked="#switchToDrinking" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="file:src/Images/Drinkingbar.png" />
          </image>
