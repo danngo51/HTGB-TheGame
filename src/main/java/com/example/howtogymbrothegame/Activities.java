@@ -6,9 +6,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import javafx.stage.Modality;
@@ -32,11 +32,15 @@ public class Activities {
     @FXML
     private Label lungs;
 
-    //Connection to PlayerManager
+    @FXML
+    private Text factsInfo;
+
+    //Connection to PlayerManager and room access
     PlayerManager player = PlayerManager.getInstance();
 
     //This has to be public, so it can be used in other classes.
     //This methode is used to update the player stats
+
     public void displayStats(String pancreasVal, String liverVal, String heartVal, String lungsVal) {
         pancreas.setText(pancreasVal);
         liver.setText(liverVal);
@@ -45,12 +49,17 @@ public class Activities {
     }
 
     @FXML
-    public void switchtoWeekDays(ActionEvent event) throws IOException {
+    public void switchtoWeekDays(MouseEvent event) throws IOException {
+        Door door = new Door();
+        door.test(event);
+
+        /*
         root = FXMLLoader.load(getClass().getResource("Weekday.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+         */
     }
 
 
@@ -135,7 +144,6 @@ public class Activities {
     }
 
 
-
     public void printInfo(String handling) {
         switch (handling) {
             case "smoking" -> infoSmoking();
@@ -153,8 +161,6 @@ public class Activities {
 
     //'PlayerAnswer' is used to store the players decision.
     private String PlayerAnswer;
-
-
 
 
     // En metode, som stiller dig spørgsmål i rummene
@@ -181,7 +187,7 @@ public class Activities {
     //Fitness
 
 
-    //Rygeskur
+    //Rygeskur og drugs
     @FXML
     private Button btn1;
     @FXML
@@ -194,6 +200,7 @@ public class Activities {
         Stage stage;
         Parent root;
         if (event.getSource() == btn1) {
+            lock1 = true;
             // Gør at når der klikkes på btn1 popper PopUpBoxRyge filen op.
             stage = new Stage();
             root = FXMLLoader.load(getClass().getResource("PopUpBoxRyge.fxml"));
@@ -205,81 +212,62 @@ public class Activities {
             //Nedstående er til at den popper op og venter, indtil vi dismisser den
             stage.showAndWait();
         } else if (event.getSource() == btn2) {
-                // Gør at når der klikkes på btn1 popper PopUpBoxRyge filen op.
-                stage = new Stage();
-                root = FXMLLoader.load(getClass().getResource("PopUpBoxDrugs.fxml"));
-                stage.setScene(new Scene(root));
-                //Nedestående er så det bliver et pop-up
-                stage.initModality(Modality.APPLICATION_MODAL);
-                //Nedestående reminder "pop-up scenen" om, hvem der var den originale owner.
-                stage.initOwner(btn2.getScene().getWindow());
-                //Nedstående er til at den popper op og venter, indtil vi dismisser den
-                stage.showAndWait();
+            lock2 = true;
+            // Gør at når der klikkes på btn1 popper PopUpBoxDrugs filen op.
+            stage = new Stage();
+            root = FXMLLoader.load(getClass().getResource("PopUpBoxDrugs.fxml"));
+            stage.setScene(new Scene(root));
+            //Nedestående er så det bliver et pop-up
+            stage.initModality(Modality.APPLICATION_MODAL);
+            //Nedestående reminder "pop-up scenen" om, hvem der var den originale owner.
+            stage.initOwner(btn2.getScene().getWindow());
+            //Nedstående er til at den popper op og venter, indtil vi dismisser den
+            stage.showAndWait();
         } else {
             stage = (Stage) btnBack.getScene().getWindow();
             stage.close();
         }
     }
 
+    //Låse til at kunne låse handlemulighederne indtil faktaboksene er læst op.
+    boolean lock1 = false;
+    boolean lock2 = false;
+    @FXML
+    private Text advarsel;
+
+    @FXML
+    private void smookingCigarets() {
+        if (lock1 == true) {
+            player.setHeart(player.getYesHeart());
+            this.heart.setText(String.valueOf(player.getHeart()));
+            advarsel.setText(" ");
+        } else {
+            advarsel.setText("Du har ikke læst fakta om rygning");
+        }
+    }
+
+    @FXML
+    private void doingDrugs() {
+        if (lock2 == true) {
+        player.setHeart(player.getYesHeart());
+        this.heart.setText(String.valueOf(player.getHeart()));
+        player.setLiver(player.getYesLiver());
+        this.liver.setText(String.valueOf(player.getLiver()));
+        player.setPancreas(player.getYesPancreas());
+        this.pancreas.setText(String.valueOf(player.getPancreas()));
+        player.setLungs(player.getYesLungs());
+        this.lungs.setText(String.valueOf(player.getLungs()));
+            advarsel.setText(" ");
+    } else {
+            advarsel.setText("Du har ikke læst fakta om drugs");
+        }
+    }
 
     //pop-up boks
 
     //Drikke
 
     //Kantine
-
-    @FXML
-    private Text factsInfo;
-
-
-
-    @FXML
-    private void eatingUnhealthy(){
-        String unHealthy = "Et langvarigt indtag af dårlig kost kan føre til adskillige sygdomme.\n \nKonsekvenserne ved en dårlig kost vil blandt andet føre til: \n \n";
-        String unHealthyTwo = "Hjertekar-sygdomme, som kommer af forhøjet kolesterol, forhøjet blodtryk og overvægt. Chancen for diabetes type 2 bliver forøget ved at være overvægt, som kan føre til hyppige infektioner. \n \n";
-        String unHealthyThree = "Kræft i spiserør, tyktarm, bryst, livmoder, bugspytskirtel og nyre, som kommer af overvægt. \n \nVil du virkelig udsætte dig selv for det?";
-        player.setHeart(player.getYesHeart());
-        this.heart.setText(String.valueOf(player.getHeart()));
-        player.setPancreas(player.getYesPancreas());
-        this.pancreas.setText(String.valueOf(player.getPancreas()));
-        this.factsInfo.setText(unHealthy + unHealthyTwo + unHealthyThree);
-    }
-    //Fitness
-    @FXML
-    private Text factsinfo;
-
-
-    @FXML
-    private void exercise(){
-        String exercise = "Regelmæssig fysisk aktivitet har mange helbredsfordele, eksempler kunne være: \n \n";
-        String exercise2 = "Øget lunge- og hjertefunktion og sænkning af risikoen for prædiabetes og hjertesygdomme. Det hjælper også med at forebygge sygdomme i muskler og led. Udover dette hjælper det også med at formindske tyktarmskræft, brystkræft og livmoderkræft.   \n \n";
-        String exercise3 = "Der er ikke nogen ulemper, så kom i gang makker!";
-        player.setHeart(player.getNoHeart());
-        this.heart.setText(String.valueOf(player.getHeart()));
-
-        player.setLungs(player.getNoLungs());
-        this.lungs.setText(String.valueOf(player.getLungs()));
-
-        player.setLiver(player.getNoLiver());
-        this.liver.setText(String.valueOf(player.getLiver()));
-
-        player.setPancreas(player.getNoPancreas());
-        this.pancreas.setText(String.valueOf(player.getPancreas()));
-        this.factsinfo.setText(exercise + exercise2 + exercise3);
-    }
-
-
-    @FXML
-    private void eatingHealthy(){
-        String healthy = "Du har truffet det rigtige valg. Det er vigtigt at spise varieret, hvilket betyder en kost der højt indhold af frugt, fibre, protein og grøntsager og lavt indhold af mættet fedt, salt, rødt kød og simple sukkerarter. \n \n";
-        String healthyTwo = "Det vigtige ved at træffe sunde valg er at undgå at udvikle sygdomme, som kan komme ved en kost, der indeholder for meget af det, som har en negativ påvirkelse. \n \n";
-        String healthyThree = "Det er også vigtig at pointere at lavt indhold betyder ikke at fjerne fuldstændigt, kosten skal kunne vedligeholdes";
-        player.setHeart(player.getNoHeart());
-        this.heart.setText(String.valueOf(player.getHeart()));
-        player.setPancreas(player.getNoPancreas());
-        this.pancreas.setText(String.valueOf(player.getPancreas()));
-        this.factsInfo.setText(healthy + healthyTwo + healthyThree);
-    }
     @FXML
     public void CanteenGame(MouseEvent event){
         try {
@@ -294,5 +282,48 @@ public class Activities {
             throw new RuntimeException(e);
         }
 
+    }
+
+
+    @FXML
+    private void eatingUnhealthy(){
+        String unHealthy = "Et langvarigt indtag af dårlig kost kan føre til adskillige sygdomme.\n \n Konsekvenserne ved en dårlig kost vil blandt andet føre til: \n \n";
+        String unHealthyTwo = "Hjertekar-sygdomme, som kommer af forhøjet kolesterol, forhøjet blodtryk og overvægt. Chancen for diabetes type 2 bliver forøget ved at være overvægt, som kan føre til hyppige infektioner. \n \n";
+        String unHealthyThree = "Kræft i spiserør, tyktarm, bryst, livmoder, bugspytskirtel og nyre, som kommer af overvægt. \n \n Vil du virkelig udsætte dig selv for det?";
+        player.setHeart(player.getYesHeart());
+        this.heart.setText(String.valueOf(player.getHeart()));
+        player.setPancreas(player.getYesPancreas());
+        this.pancreas.setText(String.valueOf(player.getPancreas()));
+        this.factsInfo.setText(unHealthy + unHealthyTwo + unHealthyThree);
+    }
+    @FXML
+    private void eatingHealthy() {
+        String healthy = "Du har truffet det rigtige valg. Det er vigtigt at spise varieret, hvilket betyder en kost der højt indhold af frugt, fibre, protein og grøntsager og lavt indhold af mættet fedt, salt, rødt kød og simple sukkerarter. \n \n";
+        String healthyTwo = "Det vigtige ved at træffe sunde valg er at undgå at udvikle sygdomme, som kan komme ved en kost, der indeholder for meget af det, som har en negativ påvirkelse. \n \n";
+        String healthyThree = "Det er også vigtig at pointere at lavt indhold betyder ikke at fjerne fuldstændigt, kosten skal kunne vedligeholdes";
+        player.setHeart(player.getNoHeart());
+        this.heart.setText(String.valueOf(player.getHeart()));
+        player.setPancreas(player.getNoPancreas());
+        this.pancreas.setText(String.valueOf(player.getPancreas()));
+        this.factsInfo.setText(healthy + healthyTwo + healthyThree);
+    }
+        //Fitness
+
+    @FXML
+    private Text factsinfo;
+    @FXML
+    private void exercise(){
+        String exercise = "Regelmæssig fysisk aktivitet har mange helbredsfordele, eksempler kunne være: \n \n";
+        String exercise2 = "Øget lunge- og hjertefunktion og sænkning af risikoen for prædiabetes og hjertesygdomme. Det formindsker også sygedomme i muskler og led. Udover dette hjælper det også med at forebygge tyktarmskræft, brystkræft og livmoderkræft. \n \n"
+        String exercise3 = "Der er ikke nogen ulemper, så kom i gang makker!";
+        player.setHeart(player.getNoHeart());
+        this.heart.setText(String.valueOf(player.getHeart()));
+        player.setLungs(player.getNoLungs());
+        this.lungs.setText(String.valueOf(player.getLungs()));
+        player.setLiver(player.getNoLiver());
+        this.liver.setText(String.valueOf(player.getLiver()));
+        player.setPancreas(player.getNoPancreas());
+        this.pancreas.setText(String.valueOf(player.getPancreas()));
+        this.factsinfo.setText(exercise + exercise2 + exercise3);
     }
 }

@@ -76,7 +76,7 @@
                <Image url="@../../../../../Images/bar2.PNG" />
             </image>
          </ImageView>
-            <Button layoutX="-23.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchtoWeekDays" prefHeight="7.0" prefWidth="100.0" rotate="-90.0" text="EXIT" />
+            <Button layoutX="-23.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#switchtoWeekDays" prefHeight="7.0" prefWidth="100.0" rotate="-90.0" text="EXIT" />
          <ImageView fitHeight="77.0" fitWidth="19.0" layoutX="280.0" layoutY="429.0" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="@../../../../../Images/BeerBottle.png" />

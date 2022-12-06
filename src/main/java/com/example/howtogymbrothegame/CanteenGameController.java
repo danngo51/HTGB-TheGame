@@ -1,5 +1,6 @@
 package com.example.howtogymbrothegame;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
@@ -18,7 +19,7 @@ public class CanteenGameController {
     PlayerManager player = PlayerManager.getInstance();
 
     @FXML
-    private void closeGame() {
+    private void closeGame(ActionEvent event) {
         stage = (Stage) scenePane.getScene().getWindow();
         stage.close();
     }
