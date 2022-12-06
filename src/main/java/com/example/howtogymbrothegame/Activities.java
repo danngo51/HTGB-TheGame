@@ -314,7 +314,7 @@ public class Activities {
     @FXML
     private void exercise(){
         String exercise = "Regelmæssig fysisk aktivitet har mange helbredsfordele, eksempler kunne være: \n \n";
-        String exercise2 = "Øget lunge- og hjertefunktion og sænkning af risikoen for prædiabetes og hjertesygdomme. Det formindsker også sygedomme i muskler og led. Udover dette hjælper det også med at forebygge tyktarmskræft, brystkræft og livmoderkræft. \n \n"
+        String exercise2 = "Øget lunge- og hjertefunktion og sænkning af risikoen for prædiabetes og hjertesygdomme. Det formindsker også sygedomme i muskler og led. Udover dette hjælper det også med at forebygge tyktarmskræft, brystkræft og livmoderkræft. \n \n";
         String exercise3 = "Der er ikke nogen ulemper, så kom i gang makker!";
         player.setHeart(player.getNoHeart());
         this.heart.setText(String.valueOf(player.getHeart()));
