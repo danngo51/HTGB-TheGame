@@ -1,24 +1,20 @@
 package com.example.howtogymbrothegame;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class Activities {
 
@@ -184,6 +180,7 @@ public class Activities {
 
     //Fitness
 
+
     //Rygeskur
     @FXML
     private Button btn1;
@@ -224,7 +221,10 @@ public class Activities {
         }
     }
 
+
     //pop-up boks
+
+    //Drikke
 
     //Kantine
 
@@ -234,14 +234,29 @@ public class Activities {
 
     @FXML
     private void eatingUnhealthy(){
-        String unHealthy = "Et langvarigt indtag af dårlig kost kan føre til adskillige sygdomme.\n \n Konsekvenserne ved en dårlig kost vil blandt andet føre til: \n \n";
+        String unHealthy = "Et langvarigt indtag af dårlig kost kan føre til adskillige sygdomme.\n \nKonsekvenserne ved en dårlig kost vil blandt andet føre til: \n \n";
         String unHealthyTwo = "Hjertekar-sygdomme, som kommer af forhøjet kolesterol, forhøjet blodtryk og overvægt. Chancen for diabetes type 2 bliver forøget ved at være overvægt, som kan føre til hyppige infektioner. \n \n";
-        String unHealthyThree = "Kræft i spiserør, tyktarm, bryst, livmoder, bugspytskirtel og nyre, som kommer af overvægt. \n \n Vil du virkelig udsætte dig selv for det?";
+        String unHealthyThree = "Kræft i spiserør, tyktarm, bryst, livmoder, bugspytskirtel og nyre, som kommer af overvægt. \n \nVil du virkelig udsætte dig selv for det?";
         player.setHeart(player.getYesHeart());
         this.heart.setText(String.valueOf(player.getHeart()));
         player.setPancreas(player.getYesPancreas());
         this.pancreas.setText(String.valueOf(player.getPancreas()));
         this.factsInfo.setText(unHealthy + unHealthyTwo + unHealthyThree);
+    }
+    //Fitness
+    @FXML
+    private void exercise(){
+        player.setHeart(player.getNoHeart());
+        this.heart.setText(String.valueOf(player.getHeart()));
+
+        player.setLungs(player.getNoLungs());
+        this.lungs.setText(String.valueOf(player.getLungs()));
+
+        player.setLiver(player.getNoLiver());
+        this.liver.setText(String.valueOf(player.getLiver()));
+
+        player.setPancreas(player.getNoPancreas());
+        this.pancreas.setText(String.valueOf(player.getPancreas()));
     }
 
     @FXML
@@ -254,5 +269,20 @@ public class Activities {
         player.setPancreas(player.getNoPancreas());
         this.pancreas.setText(String.valueOf(player.getPancreas()));
         this.factsInfo.setText(healthy + healthyTwo + healthyThree);
+    }
+    @FXML
+    public void CanteenGame(MouseEvent event){
+        try {
+            FXMLLoader canteenGameLoader = new FXMLLoader(getClass().getResource("canteenGame.fxml"));
+            Parent gameRoot = (Parent) canteenGameLoader.load();
+
+            stage = new Stage();
+            stage.setScene(new Scene(gameRoot));
+            stage.setTitle("canteenGame");
+            stage.showAndWait();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }

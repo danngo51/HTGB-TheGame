@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="scenePane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.howtogymbrothegame.CanteenGameController">
+   <children>
+      <ImageView fx:id="candy" fitHeight="514.0" fitWidth="1057.0" layoutX="-165.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Images/restaurantKitchen.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeGame" text="Tilbage" />
+      <ImageView fx:id="cake" fitHeight="60.0" fitWidth="47.0" layoutX="35.0" layoutY="189.0" onMouseClicked="#cake" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Images/cake.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="carrot" fitHeight="39.0" fitWidth="39.0" layoutX="86.0" layoutY="193.0" onMouseClicked="#carrot" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Images/carrot.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="chicken" fitHeight="61.0" fitWidth="66.0" layoutX="131.0" layoutY="195.0" onContextMenuRequested="#chicken" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Images/chickenleg.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="soda" fitHeight="39.0" fitWidth="58.0" layoutX="523.0" layoutY="191.0" onMouseClicked="#soda" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Images/coke.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="tomato" fitHeight="39.0" fitWidth="47.0" layoutX="210.0" layoutY="193.0" onMouseClicked="#tomato" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Images/tomatobi.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="21.0" fitWidth="39.0" layoutX="501.0" layoutY="216.0" onMouseClicked="#candy" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Images/candy.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="bellpeper" fitHeight="32.0" fitWidth="39.0" layoutX="335.0" layoutY="212.0" onMouseClicked="#bellpeper" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Images/bellpepper.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="50.0" fitWidth="68.0" layoutX="255.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="rice" fitHeight="39.0" fitWidth="50.0" layoutX="388.0" layoutY="199.0" onMouseClicked="#rice" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Images/rice.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="steakMeat" fitHeight="21.0" fitWidth="41.0" layoutX="260.0" layoutY="216.0" onMouseClicked="#steakMeat" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Images/steakmeat.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="cucumber" fitHeight="41.0" fitWidth="50.0" layoutX="429.0" layoutY="187.0" onMouseClicked="#cucumber" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Images/cucumber.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="watermelon" fitHeight="32.0" fitWidth="56.0" layoutX="110.0" layoutY="188.0" onMouseClicked="#watermelon" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Images/watermelon.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

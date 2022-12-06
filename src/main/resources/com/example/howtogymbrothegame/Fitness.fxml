@@ -9,6 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.howtogymbrothegame.Activities">
@@ -67,7 +68,10 @@
                   <Font name="System Bold Italic" size="20.0" />
                </font>
             </Label>
-            <TextFlow layoutX="30.0" layoutY="215.0" prefHeight="480.0" prefWidth="240.0" />
+            <TextFlow layoutX="30.0" layoutY="215.0" prefHeight="480.0" prefWidth="240.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Velkomen til fitness rummet!" wrappingWidth="163.047607421875" />
+               </children></TextFlow>
          </children>
       </Pane>
       <Pane prefHeight="720.0" prefWidth="980.0">
@@ -86,6 +90,16 @@
             <ImageView fitHeight="196.0" fitWidth="222.0" layoutX="744.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="file:src/Images/Boylifting.gif" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="333.0" fitWidth="274.0" layoutX="26.0" layoutY="398.0" onMouseClicked="#exercise" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:src/Images/Treadmill.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="722.0" fitWidth="113.0" layoutX="191.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:src/Images/Pillargym.png" />
                </image>
             </ImageView>
          </children>

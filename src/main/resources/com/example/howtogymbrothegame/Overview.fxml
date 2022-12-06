@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.howtogymbrothegame.OverviewController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="720.0" prefWidth="256.0" style="-fx-background-color: #05071F;">
+         <children>
+            <Button fx:id="btnNow" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#overviewNow" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Nuværende stats">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btn3mo" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#overview3mo" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Efter 3 måneder">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btn6mo" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#overview6mo" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Efter 6 måneder">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btn9mo" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#overview9mo" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Efter 9 måneder">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btn12mo" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#overview12mo" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Efter 12 måneder">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnBackToMain" alignment="BASELINE_LEFT" graphicTextGap="22.0" mnemonicParsing="false" onAction="#backToMainHub" prefHeight="42.0" prefWidth="259.0" stylesheets="@style.css" text="Tilbage til hovedmenu">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <Label layoutX="34.0" layoutY="30.0" prefHeight="68.0" prefWidth="166.0" text="Overblik" textFill="WHITE">
+         <font>
+            <Font size="45.0" />
+         </font>
+      </Label>
+      <Rectangle fill="#080b30" height="134.0" layoutX="256.0" stroke="#05071f" strokeType="INSIDE" width="1024.0" />
+      <Label fx:id="headline" layoutX="330.0" layoutY="36.0" text="Nuværende stats" textFill="WHITE">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <Label layoutX="573.0" layoutY="217.0" text="Hjerte">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="573.0" layoutY="339.0" text="Lunger">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="573.0" layoutY="466.0" text="Lever">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label layoutX="573.0" layoutY="576.0" text="Bygspytskirtel">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="pancreasOverview" layoutX="995.0" layoutY="576.0" text="Label">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="liverOverview" layoutX="995.0" layoutY="466.0" text="Label">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="lungsOverview" layoutX="995.0" layoutY="339.0" text="Label">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Label fx:id="heartOverview" layoutX="995.0" layoutY="217.0" text="Label">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="96.0" fitWidth="100.0" layoutX="428.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:src/Images/HeartPixelArt.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="116.0" fitWidth="124.0" layoutX="420.0" layoutY="303.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:src/Images/LungsPixelArt.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="105.0" fitWidth="156.0" layoutX="408.0" layoutY="440.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:src/Images/LiverPixelArt.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="71.0" fitWidth="166.0" layoutX="401.0" layoutY="569.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:src/Images/PancreasPixelArt.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
