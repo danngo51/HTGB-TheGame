@@ -69,7 +69,7 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <Text fx:id="factsInfo" layoutX="46.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Velkommen til kantinen!&#10;&#10;Mad er en stor del af at være sund, derfor står du nu overfor et valg.&#10;&#10;Vælger du at spise sundt, som vil forbedree dine stats, eller vælger du at spise usundt, som vil negativt påvirke dine stats.&#10;&#10;Du kan vælge at spise burgeren og måltidet, &#10;derudover kan du interagere med bestillingsskærmen og spille et lille spil.&#10;&#10;Mini gamet handler om at vælge flest mulige sunde madvarer for at få højeste bonus." wrappingWidth="209.962158203125">
+            <Text fx:id="factsInfo" layoutX="46.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Velkommen til kantinen!&#10;&#10;Mad er en stor del af at være sund, derfor står du nu overfor et valg.&#10;&#10;Vælger du at spise sundt, som vil forbedre dine stats, eller vælger du at spise usundt, som vil negativt påvirke dine stats.&#10;&#10;Du kan vælge at spise burgeren og måltidet, &#10;derudover kan du interagere med bestillingsskærmen og spille et lille spil.&#10;&#10;Mini gamet handler om at vælge flest mulige sunde madvarer for at få højeste bonus." wrappingWidth="209.962158203125">
                <font>
                   <Font size="15.0" />
                </font></Text>
