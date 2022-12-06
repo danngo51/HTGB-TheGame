@@ -3,6 +3,7 @@
 <?import javafx.scene.Group?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -47,27 +48,30 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label fx:id="heart" layoutX="235.0" layoutY="40.0" text="Label">
+            <Label fx:id="heart" layoutX="235.0" layoutY="40.0" text="50.0">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label fx:id="lungs" layoutX="235.0" layoutY="70.0" text="Label">
+            <Label fx:id="lungs" layoutX="235.0" layoutY="70.0" text="50.0">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label fx:id="liver" layoutX="235.0" layoutY="100.0" text="Label">
+            <Label fx:id="liver" layoutX="235.0" layoutY="100.0" text="50.0">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label fx:id="pancreas" layoutX="235.0" layoutY="130.0" text="Label">
+            <Label fx:id="pancreas" layoutX="235.0" layoutY="130.0" text="50.0">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Text fx:id="factsInfo" layoutX="39.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="209.962158203125" />
+            <Text fx:id="factsInfo" layoutX="39.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Velkommen til kantinen!&#10;&#10;Mad er en stor del af at være sund, derfor står du nu overfor et &#10;valg.&#10;&#10;Vælger du at spise sundt, som forbedrer dine stats, eller vælger du at spise usundt, som vil negativt påvirke dine stats.&#10;&#10;&#10;" wrappingWidth="209.962158203125">
+               <font>
+                  <Font size="15.0" />
+               </font></Text>
          </children>
       </Pane>
       <Pane fx:id="bigPane" prefHeight="720.0" prefWidth="980.0">
@@ -84,7 +88,15 @@
                </image>
             </ImageView>
             <ImageView fx:id="doorHandleCanteen" fitHeight="94.0" fitWidth="34.0" layoutX="449.0" layoutY="319.0" onMouseClicked="#switchtoWeekDays" pickOnBounds="true" preserveRatio="true" />
-            <ImageView fx:id="burger" fitHeight="500.0" fitWidth="500.0" layoutX="250.0" layoutY="303.0" onMouseClicked="#updatePlayerStats" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="burger" fitHeight="337.0" fitWidth="277.0" layoutX="250.0" layoutY="303.0" onMouseClicked="#eatingUnhealthy" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="healthy" fitHeight="130.0" fitWidth="246.0" layoutX="602.0" layoutY="327.0" onMouseClicked="#eatingHealthy" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../Images/mealplate.png" />
+               </image>
+               <effect>
+                  <Blend />
+               </effect>
+            </ImageView>
          </children>
       </Pane>
    </children>
