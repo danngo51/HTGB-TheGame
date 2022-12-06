@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -226,10 +227,19 @@ public class Activities {
     //Kantine
 
     @FXML
-    private void updatePlayerStats() {
-        //this.heart.setText();
-        player.setPancreas(player.getNoPancreas());
+    private Text factsInfo;
+
+
+    @FXML
+    private void eatingUnhealthy(){
+        String unHealthy = "Et langvarigt indtag af dårlig kost kan føre til adskillige sygdomme.\n \n Konsekvenserne ved en dårlig kost vil blandt andet føre til: \n \n";
+        String unHealthyTwo = "Hjertekar-sygdomme, som kommer af forhøjet kolesterol, forhøjet blodtryk og overvægt. Chancen for diabetes type 2 bliver forøget ved at være overvægt, som kan føre til hyppige infektioner. \n \n";
+        String unHealthyThree = "Kræft i spiserør, tyktarm, bryst, livmoder, bugspytskirtel og nyre, som kommer af overvægt. \n \n Vil du virkelig udsætte dig selv for det?";
+        player.setHeart(player.getYesHeart());
+        this.heart.setText(String.valueOf(player.getHeart()));
+        player.setPancreas(player.getYesPancreas());
         this.pancreas.setText(String.valueOf(player.getPancreas()));
+        this.factsInfo.setText(unHealthy + unHealthyTwo + unHealthyThree);
     }
     //Fitness
     @FXML
@@ -247,5 +257,16 @@ public class Activities {
         this.pancreas.setText(String.valueOf(player.getPancreas()));
     }
 
+    @FXML
+    private void eatingHealthy(){
+        String healthy = "Du har truffet det rigtige valg. Det er vigtigt at spise varieret, hvilket betyder en kost der højt indhold af frugt, fibre, protein og grøntsager og lavt indhold af mættet fedt, salt, rødt kød og simple sukkerarter. \n \n";
+        String healthyTwo = "Det vigtige ved at træffe sunde valg er at undgå at udvikle sygdomme, som kan komme ved en kost, der indeholder for meget af det, som har en negativ påvirkelse. \n \n";
+        String healthyThree = "Det er også vigtig at pointere at lavt indhold betyder ikke at fjerne fuldstændigt, kosten skal kunne vedligeholdes";
+        player.setHeart(player.getNoHeart());
+        this.heart.setText(String.valueOf(player.getHeart()));
+        player.setPancreas(player.getNoPancreas());
+        this.pancreas.setText(String.valueOf(player.getPancreas()));
+        this.factsInfo.setText(healthy + healthyTwo + healthyThree);
+    }
 
 }
