@@ -21,17 +21,27 @@ public class CanteenGameController {
         stage.close();
     }
 
-
+    @FXML
     ImageView tomato;
+    @FXML
     ImageView cucumber;
+    @FXML
     ImageView steakMeat;
+    @FXML
     ImageView watermelon;
+    @FXML
     ImageView carrot;
+    @FXML
     ImageView chicken;
+    @FXML
     ImageView bellpeper;
+    @FXML
     ImageView rice;
+    @FXML
     ImageView candy;
+    @FXML
     ImageView soda;
+    @FXML
     ImageView cake;
 
 
