@@ -81,7 +81,7 @@
                   <Image url="file:src/Images/GymInterior.PNG" />
                </image>
             </ImageView>
-            <Button layoutX="-23.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchtoWeekDays" prefHeight="7.0" prefWidth="100.0" rotate="-90.0" text="EXIT" />
+            <Button layoutX="-23.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#switchtoWeekDays" prefHeight="7.0" prefWidth="100.0" rotate="-90.0" text="EXIT" />
             <ImageView fitHeight="223.0" fitWidth="187.0" layoutX="540.0" layoutY="371.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="file:src/Images/Girllifting2.gif" />

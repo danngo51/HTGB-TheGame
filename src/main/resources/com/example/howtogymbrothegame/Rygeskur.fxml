@@ -73,7 +73,6 @@
             </Pane>
             <Pane prefHeight="720.0" prefWidth="980.0">
                <children>
-                  <Button layoutX="-23.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchtoWeekDays" prefHeight="7.0" prefWidth="100.0" rotate="-90.0" text="EXIT" />
                   <ImageView fitHeight="737.0" fitWidth="1002.0" layoutX="-22.0" layoutY="-11.0">
                      <image>
                         <Image url="@../../../../../Images/RygeskurInterior.PNG" />
@@ -91,6 +90,7 @@
                   </ImageView>
                   <Button fx:id="btn1" layoutX="416.0" layoutY="461.0" mnemonicParsing="false" onAction="#handleButtonEvent" text="Cigaretter" />
                   <Button fx:id="btn2" layoutX="721.0" layoutY="462.0" mnemonicParsing="false" onAction="#handleButtonEvent" text="Drugs" />
+                  <Button layoutX="-23.0" layoutY="348.0" mnemonicParsing="false" onMouseClicked="#switchtoWeekDays" prefHeight="7.0" prefWidth="100.0" rotate="-90.0" text="EXIT" />
                </children>
             </Pane>
          </children>

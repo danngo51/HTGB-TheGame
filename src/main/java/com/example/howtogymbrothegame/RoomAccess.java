@@ -20,6 +20,10 @@ public class RoomAccess {
     private boolean AccessSaturday;
     private boolean AccessSunday;
 
+    private boolean mTT;
+    private boolean friday;
+    private boolean saturday;
+    private boolean sunday;
 
 
     public boolean isAccessFriday() {
@@ -44,5 +48,31 @@ public class RoomAccess {
 
     public void setAccessSunday(boolean accessSunday) {
         this.AccessSunday = accessSunday;
+    }
+
+
+    public boolean ismTT() {
+        return mTT;
+    }
+    public void setmTT(boolean mTT) {
+        this.mTT = mTT;
+    }
+    public boolean isFriday() {
+        return friday;
+    }
+    public void setFriday(boolean friday) {
+        this.friday = friday;
+    }
+    public boolean isSaturday() {
+        return saturday;
+    }
+    public void setSaturday(boolean saturday) {
+        this.saturday = saturday;
+    }
+    public boolean isSunday() {
+        return sunday;
+    }
+    public void setSunday(boolean sunday) {
+        this.sunday = sunday;
     }
 }
