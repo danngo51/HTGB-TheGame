@@ -82,6 +82,7 @@ public class DrikkeController implements Initializable {
         String e = "4 øl";
         list.addAll(a, b, c, d, e);
         myChoiceBox.getItems().addAll(list);
+        myChoiceBox.setOnAction(this::getBeer);
     }
     @FXML
     public void switchtoWeekDays(ActionEvent event) throws IOException {
@@ -91,4 +92,6 @@ public class DrikkeController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+
+
 }
