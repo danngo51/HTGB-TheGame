@@ -31,11 +31,12 @@ public class Activities {
     @FXML
     private Label lungs;
 
-    //Connection to PlayerManager
+    //Connection to PlayerManager and room access
     PlayerManager player = PlayerManager.getInstance();
 
     //This has to be public, so it can be used in other classes.
     //This methode is used to update the player stats
+
     public void displayStats(String pancreasVal, String liverVal, String heartVal, String lungsVal) {
         pancreas.setText(pancreasVal);
         liver.setText(liverVal);
@@ -44,12 +45,17 @@ public class Activities {
     }
 
     @FXML
-    public void switchtoWeekDays(ActionEvent event) throws IOException {
+    public void switchtoWeekDays(MouseEvent event) throws IOException {
+        Door door = new Door();
+        door.test(event);
+
+        /*
         root = FXMLLoader.load(getClass().getResource("Weekday.fxml"));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+         */
     }
 
 
