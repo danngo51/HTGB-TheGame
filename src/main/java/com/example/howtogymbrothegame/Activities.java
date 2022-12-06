@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -176,7 +177,7 @@ public class Activities {
     //Fitness
 
 
-    //Rygeskur
+    //Rygeskur og drugs
     @FXML
     private Button btn1;
     @FXML
@@ -185,15 +186,11 @@ public class Activities {
     private Button btn2;
 
     @FXML
-    private Button rbtnyes;
-    @FXML
-    private Button rbtnno;
-
-    @FXML
     public void handleButtonEvent(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
         if (event.getSource() == btn1) {
+            lock1 = true;
             // Gør at når der klikkes på btn1 popper PopUpBoxRyge filen op.
             stage = new Stage();
             root = FXMLLoader.load(getClass().getResource("PopUpBoxRyge.fxml"));
@@ -205,6 +202,7 @@ public class Activities {
             //Nedstående er til at den popper op og venter, indtil vi dismisser den
             stage.showAndWait();
         } else if (event.getSource() == btn2) {
+            lock2 = true;
             // Gør at når der klikkes på btn1 popper PopUpBoxDrugs filen op.
             stage = new Stage();
             root = FXMLLoader.load(getClass().getResource("PopUpBoxDrugs.fxml"));
@@ -221,14 +219,26 @@ public class Activities {
         }
     }
 
+    //Låse til at kunne låse handlemulighederne indtil faktaboksene er læst op.
+    boolean lock1 = false;
+    boolean lock2 = false;
+    @FXML
+    private Text advarsel;
+
     @FXML
     private void smookingCigarets() {
-        player.setHeart(player.getYesHeart());
-        this.heart.setText(String.valueOf(player.getHeart()));
+        if (lock1 == true) {
+            player.setHeart(player.getYesHeart());
+            this.heart.setText(String.valueOf(player.getHeart()));
+            advarsel.setText(" ");
+        } else {
+            advarsel.setText("Du har ikke læst fakta om rygning");
+        }
     }
 
     @FXML
     private void doingDrugs() {
+        if (lock2 == true) {
         player.setHeart(player.getYesHeart());
         this.heart.setText(String.valueOf(player.getHeart()));
         player.setLiver(player.getYesLiver());
@@ -237,6 +247,10 @@ public class Activities {
         this.pancreas.setText(String.valueOf(player.getPancreas()));
         player.setLungs(player.getYesLungs());
         this.lungs.setText(String.valueOf(player.getLungs()));
+            advarsel.setText(" ");
+    } else {
+            advarsel.setText("Du har ikke læst fakta om drugs");
+        }
     }
 
     //pop-up boks
