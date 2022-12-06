@@ -45,55 +45,70 @@ public class CanteenGameController {
     ImageView cake;
 
 
+
+
+    private void setItemScorePositiv() {
+        itemScore = itemScore + 1;
+        System.out.println(itemScore);
+    }
+
+    private void setItemScoreNegativ() {
+        itemScore = itemScore -1;
+        System.out.println(itemScore);
+    }
+    @FXML
     private void tomato(MouseEvent event) {
         setItemScorePositiv();
         tomato.setVisible(false);
     }
+    @FXML
     private void cucumber(MouseEvent event) {
         setItemScorePositiv();
         cucumber.setVisible(false);
     }
+    @FXML
     private void steakMeat(MouseEvent event) {
         setItemScorePositiv();
         steakMeat.setVisible(false);
     }
+    @FXML
     private void watermelon(MouseEvent event) {
         setItemScorePositiv();
         watermelon.setVisible(false);
     }
+    @FXML
     private void carrot(MouseEvent event) {
         setItemScorePositiv();
         carrot.setVisible(false);
     }
+    @FXML
     private void chicken(MouseEvent event) {
         setItemScorePositiv();
         chicken.setVisible(false);
     }
+    @FXML
     private void bellpeper(MouseEvent event) {
         setItemScorePositiv();
         bellpeper.setVisible(false);
     }
+    @FXML
     private void rice(MouseEvent event) {
         setItemScoreNegativ();
         rice.setVisible(false);
     }
+    @FXML
     private void candy(MouseEvent event) {
         setItemScoreNegativ();
         candy.setVisible(false);
     }
+    @FXML
     private void soda(MouseEvent event) {
         setItemScoreNegativ();
         soda.setVisible(false);
     }
+    @FXML
     private void cake(MouseEvent event) {
         setItemScoreNegativ();
         cake.setVisible(false);
-
-    private void setItemScorePositiv() {
-        this.itemScore = itemScore + 1;
     }
-    private void setItemScoreNegativ() {
-        this.itemScore = itemScore - 1;
-    }
-
 }
