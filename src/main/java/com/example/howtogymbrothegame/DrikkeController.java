@@ -11,6 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -84,12 +85,9 @@ public class DrikkeController implements Initializable {
         myChoiceBox.setOnAction(this::getBeer);
     }
     @FXML
-    public void switchtoWeekDays(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("Weekday.fxml"));
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    public void switchtoWeekDays(MouseEvent event) throws IOException {
+        Door door = new Door();
+        door.test(event);
     }
     @FXML
     private void drinkingBeer() {

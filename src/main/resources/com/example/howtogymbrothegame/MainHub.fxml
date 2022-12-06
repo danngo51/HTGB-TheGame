@@ -17,7 +17,7 @@
          <children>
             <ImageView fitHeight="726.0" fitWidth="1280.0">
                <image>
-                  <Image url="file:src/Images/DanErBesværlig.PNG" />
+                  <Image url="file:src/Images/BrickWall.PNG" />
                </image>
             </ImageView>
             <Text layoutX="473.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Velkommen til How To Gymbro!" textAlignment="CENTER" wrappingWidth="333.3357238769531">
