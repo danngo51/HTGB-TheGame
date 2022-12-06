@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.howtogymbrothegame.Activities">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.howtogymbrothegame.Activities">
    <children>
+      <Pane prefHeight="737.0" prefWidth="1290.0" style="-fx-background-color: #ab187a;" />
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="720" prefWidth="1280">
          <children>
             <Pane layoutX="980.0" prefHeight="720.0" prefWidth="300.0">
                <children>
-                  <Rectangle arcHeight="20.0" arcWidth="20.0" fill="DODGERBLUE" height="150.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="280.0" />
-                  <Rectangle arcHeight="20.0" arcWidth="20.0" fill="DODGERBLUE" height="540.0" layoutX="10.0" layoutY="170.0" stroke="BLACK" strokeType="INSIDE" width="280.0" />
+                  <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#d070ff" height="150.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="280.0" />
+                  <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#d070ff" height="540.0" layoutX="10.0" layoutY="170.0" stroke="BLACK" strokeType="INSIDE" width="280.0" />
                   <Label layoutX="100.0" layoutY="15.0" text="Player stats">
                      <font>
                         <Font name="System Bold Italic" size="20.0" />
@@ -66,9 +72,14 @@
                   </Label>
                   <TextFlow layoutX="30.0" layoutY="215.0" prefHeight="250.0" prefWidth="240.0">
                      <children>
-                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Velkommen til din lokale ryge bar.&#10;&#10;Her har du muligheden for at ryge lige så meget som du ville, og hvis du føler dig ekstra spicy, så har vi også noget lidt stærkere, wink, wink.&#10;&#10;For at ryge eller tage stoffer, skal du klikke på følgende:&#10;- Cigaretpakken som ligger på den venstre sofa.&#10;- Pillerne som ligger på den højre sofa.&#10;&#10;Husk at læse faktaboksene før du vælge at ryge eller tage stoffer ;)" />
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Velkommen til din lokale ryge bar.&#10;&#10;Her har du muligheden for at ryge lige så meget som du vil, og hvis du føler dig ekstra spicy, så har vi også noget lidt stærkere, wink, wink.&#10;&#10;For at ryge eller tage stoffer, skal du klikke på følgende:&#10;- Cigaretpakken som ligger på den venstre sofa.&#10;- Pillerne som ligger på den højre sofa.&#10;&#10;Husk at læse faktaboksene før du vælger at ryge eller tage stoffer ;)">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Text>
                      </children></TextFlow>
-                  <Text fx:id="advarsel" layoutX="28.0" layoutY="601.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&#10;" wrappingWidth="251.1655723728138" />
+                  <Text fx:id="advarsel" layoutX="26.0" layoutY="660.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&#10;" textAlignment="CENTER" wrappingWidth="251.1655723728138" />
+                  <Button fx:id="btn1" layoutX="30.0" layoutY="614.0" mnemonicParsing="false" onAction="#handleButtonEvent" style="-fx-background-color: #d41e9a;" text="Fakta om rygning" />
+                  <Button fx:id="btn2" layoutX="167.0" layoutY="614.0" mnemonicParsing="false" onAction="#handleButtonEvent" style="-fx-background-color: #d41e9a;" text="Fakta om stoffer" />
                </children>
             </Pane>
             <Pane prefHeight="720.0" prefWidth="980.0">
@@ -88,8 +99,6 @@
                         <Image url="file:src/Images/drugs.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="btn1" layoutX="999.0" layoutY="541.0" mnemonicParsing="false" onAction="#handleButtonEvent" text="Fakta om rygning" />
-                  <Button fx:id="btn2" layoutX="1152.0" layoutY="541.0" mnemonicParsing="false" onAction="#handleButtonEvent" text="Fakta om stoffer" />
                   <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#switchtoWeekDays" prefHeight="7.0" prefWidth="100.0" text="Tilbage" />
                </children>
             </Pane>

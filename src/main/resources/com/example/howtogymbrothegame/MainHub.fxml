@@ -5,6 +5,7 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -12,15 +13,26 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.howtogymbrothegame.Door">
    <children>
-      <Text layoutX="400.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Velkommen til How To Gymbro!" wrappingWidth="501.3357238769531">
+      <Pane prefHeight="720.0" prefWidth="1280.0">
+         <children>
+            <ImageView fitHeight="726.0" fitWidth="1280.0">
+               <image>
+                  <Image url="file:src/Images/DanErBesværlig.PNG" />
+               </image>
+            </ImageView>
+            <Text layoutX="473.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Velkommen til How To Gymbro!" textAlignment="CENTER" wrappingWidth="333.3357238769531">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Text fill="WHITE" layoutX="108.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dette spil hjælper dig med at forstå konsekvenserne af dine daglige livsstilsvalg. Hvert rum giver dig adskillige valg du skal træffe. Dine valgmuligheder består af gode og dårlige valg for dit helbred. Hvert valg du træffer kommer til at have en indvirkning på dit liv. Vælg omhyggeligt!" wrappingWidth="1095.1493682861328">
          <font>
-            <Font size="35.0" />
-         </font></Text>
-      <Text layoutX="108.0" layoutY="163.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Dette spil hjælper dig med at forstå konsekvenserne af dine daglige livsstilsvalg. Hvert rum giver dig adskillige valg du skal træffe. Dine valgmuligheder består af gode og dårlige valg for dit helbred. Hvert valg du træffer kommer til at have en indvirkning på dit liv. Vælg omhyggeligt!" wrappingWidth="1095.1493682861328">
-         <font>
-            <Font size="20.0" />
-         </font></Text>
-      <Group layoutX="80.0" layoutY="270.0" onMouseClicked="#switchToMTT">
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Text>
+      <Group layoutX="80.0" layoutY="302.0" onMouseClicked="#switchToMTT">
          <children>
             <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#cd5900" height="346.0" layoutX="12.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="216.0" />
             <Circle fill="#eeff00" layoutX="209.0" layoutY="194.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
@@ -30,7 +42,7 @@
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d3d00" height="133.0" layoutX="34.0" layoutY="46.0" stroke="BLACK" strokeType="INSIDE" width="76.0" />
          </children>
       </Group>
-      <Group layoutX="380.0" layoutY="270.0" onMouseClicked="#switchToFriday">
+      <Group layoutX="380.0" layoutY="302.0" onMouseClicked="#switchToFriday">
          <children>
             <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#cd5900" height="346.0" layoutX="12.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="216.0" />
             <Circle fill="#eeff00" layoutX="209.0" layoutY="194.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
@@ -45,7 +57,7 @@
             </ImageView>
          </children>
       </Group>
-      <Group layoutX="683.0" layoutY="270.0" onMouseClicked="#switchToSaturday">
+      <Group layoutX="683.0" layoutY="302.0" onMouseClicked="#switchToSaturday">
          <children>
             <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#cd5900" height="346.0" layoutX="12.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="216.0" />
             <Circle fill="#eeff00" layoutX="209.0" layoutY="194.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />
@@ -60,7 +72,7 @@
             </ImageView>
          </children>
       </Group>
-      <Group layoutX="985.0" layoutY="270.0" onMouseClicked="#switchToSunday">
+      <Group layoutX="985.0" layoutY="302.0" onMouseClicked="#switchToSunday">
          <children>
             <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#cd5900" height="346.0" layoutX="12.0" layoutY="21.0" stroke="BLACK" strokeType="INSIDE" width="216.0" />
             <Circle fill="#eeff00" layoutX="209.0" layoutY="194.0" radius="8.0" stroke="BLACK" strokeType="INSIDE" />

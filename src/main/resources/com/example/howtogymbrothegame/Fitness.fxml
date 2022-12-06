@@ -1,18 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.howtogymbrothegame.Activities">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.howtogymbrothegame.Activities">
    <children>
+      <Pane prefHeight="720.0" prefWidth="980.0">
+         <children>
+            <Pane prefHeight="722.0" prefWidth="1280.0" style="-fx-background-color: #248064;" />
+            <ImageView fitHeight="728.0" fitWidth="996.0" layoutX="-16.0" layoutY="-6.0" pickOnBounds="true">
+               <image>
+                  <Image url="file:src/Images/GymInterior.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="223.0" fitWidth="187.0" layoutX="540.0" layoutY="371.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:src/Images/Girllifting2.gif" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="196.0" fitWidth="222.0" layoutX="744.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:src/Images/Boylifting.gif" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="333.0" fitWidth="274.0" layoutX="26.0" layoutY="398.0" onMouseClicked="#exercise" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:src/Images/Treadmill.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="722.0" fitWidth="113.0" layoutX="191.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:src/Images/Pillargym.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#switchtoWeekDays" prefHeight="7.0" prefWidth="100.0" text="Tilbage" />
+         </children>
+      </Pane>
       <Pane layoutX="975.0" prefHeight="720.0" prefWidth="300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="DODGERBLUE" height="150.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="280.0" />
-            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="DODGERBLUE" height="540.0" layoutX="10.0" layoutY="170.0" stroke="BLACK" strokeType="INSIDE" width="280.0" />
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#1dd79f" height="150.0" layoutX="10.0" layoutY="10.0" stroke="BLACK" strokeType="INSIDE" width="280.0" />
+            <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#1dd79f" height="540.0" layoutX="10.0" layoutY="170.0" stroke="BLACK" strokeType="INSIDE" width="280.0" />
             <Label layoutX="100.0" layoutY="15.0" text="Player stats">
                <font>
                   <Font name="System Bold Italic" size="20.0" />
@@ -65,38 +101,11 @@
             </Label>
             <TextFlow layoutX="30.0" layoutY="215.0" prefHeight="480.0" prefWidth="240.0">
                <children>
-                  <Text fx:id="factsinfo" strokeType="OUTSIDE" strokeWidth="0.0" text="Velkomen til fitness rummet! Her kan du træffe valget om at dyrke noget træning ved at klikke på løbebåndet. Dyrker du træning øger du dine point i alle organer." wrappingWidth="163.047607421875" />
+                  <Text fx:id="factsinfo" strokeType="OUTSIDE" strokeWidth="0.0" text="Velkomen til fitness rummet! &#10;&#10;Her kan du træffe valget om at dyrke noget træning ved at klikke på løbebåndet. Dyrker du træning øger du dine point i alle organer." wrappingWidth="163.047607421875">
+                     <font>
+                        <Font size="15.0" />
+                     </font></Text>
                </children></TextFlow>
-         </children>
-      </Pane>
-      <Pane prefHeight="720.0" prefWidth="980.0">
-         <children>
-            <ImageView fitHeight="728.0" fitWidth="996.0" layoutX="-16.0" layoutY="-6.0" pickOnBounds="true">
-               <image>
-                  <Image url="file:src/Images/GymInterior.PNG" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="223.0" fitWidth="187.0" layoutX="540.0" layoutY="371.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="file:src/Images/Girllifting2.gif" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="196.0" fitWidth="222.0" layoutX="744.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="file:src/Images/Boylifting.gif" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="333.0" fitWidth="274.0" layoutX="26.0" layoutY="398.0" onMouseClicked="#exercise" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="file:src/Images/Treadmill.png" />
-               </image>
-            </ImageView>
-            <ImageView fitHeight="722.0" fitWidth="113.0" layoutX="191.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="file:src/Images/Pillargym.png" />
-               </image>
-            </ImageView>
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseClicked="#switchtoWeekDays" prefHeight="7.0" prefWidth="100.0" text="Tilbage" />
          </children>
       </Pane>
    </children>
