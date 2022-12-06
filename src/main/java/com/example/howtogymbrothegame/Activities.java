@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ToggleGroup;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
@@ -132,7 +133,6 @@ public class Activities {
     }
 
 
-
     public void printInfo(String handling) {
         switch (handling) {
             case "smoking" -> infoSmoking();
@@ -150,8 +150,6 @@ public class Activities {
 
     //'PlayerAnswer' is used to store the players decision.
     private String PlayerAnswer;
-
-
 
 
     // En metode, som stiller dig spørgsmål i rummene
@@ -186,6 +184,11 @@ public class Activities {
     private Button btn2;
 
     @FXML
+    private Button rbtnyes;
+    @FXML
+    private Button rbtnno;
+
+    @FXML
     public void handleButtonEvent(ActionEvent event) throws IOException {
         Stage stage;
         Parent root;
@@ -201,20 +204,50 @@ public class Activities {
             //Nedstående er til at den popper op og venter, indtil vi dismisser den
             stage.showAndWait();
         } else if (event.getSource() == btn2) {
-                // Gør at når der klikkes på btn1 popper PopUpBoxRyge filen op.
-                stage = new Stage();
-                root = FXMLLoader.load(getClass().getResource("PopUpBoxDrugs.fxml"));
-                stage.setScene(new Scene(root));
-                //Nedestående er så det bliver et pop-up
-                stage.initModality(Modality.APPLICATION_MODAL);
-                //Nedestående reminder "pop-up scenen" om, hvem der var den originale owner.
-                stage.initOwner(btn2.getScene().getWindow());
-                //Nedstående er til at den popper op og venter, indtil vi dismisser den
-                stage.showAndWait();
+            // Gør at når der klikkes på btn1 popper PopUpBoxDrugs filen op.
+            stage = new Stage();
+            root = FXMLLoader.load(getClass().getResource("PopUpBoxDrugs.fxml"));
+            stage.setScene(new Scene(root));
+            //Nedestående er så det bliver et pop-up
+            stage.initModality(Modality.APPLICATION_MODAL);
+            //Nedestående reminder "pop-up scenen" om, hvem der var den originale owner.
+            stage.initOwner(btn2.getScene().getWindow());
+            //Nedstående er til at den popper op og venter, indtil vi dismisser den
+            stage.showAndWait();
         } else {
             stage = (Stage) btnBack.getScene().getWindow();
             stage.close();
         }
+    }
+
+    @FXML
+    private void smookingCigarets() {
+        player.setHeart(player.getYesHeart());
+        this.heart.setText(String.valueOf(player.getHeart()));
+    }
+
+    @FXML
+    private void doingDrugs() {
+        player.setHeart(player.getYesHeart());
+        this.heart.setText(String.valueOf(player.getHeart()));
+        player.setLiver(player.getYesLiver());
+        this.liver.setText(String.valueOf(player.getLiver()));
+        player.setPancreas(player.getYesPancreas());
+        this.pancreas.setText(String.valueOf(player.getPancreas()));
+        player.setLungs(player.getYesLungs());
+        this.lungs.setText(String.valueOf(player.getLungs()));
+    }
+
+    @FXML
+    private void notDoingDrugs() {
+        player.setHeart(player.getYesHeart());
+        this.heart.setText(String.valueOf(player.getHeart()));
+        player.setLiver(player.getYesLiver());
+        this.liver.setText(String.valueOf(player.getLiver()));
+        player.setPancreas(player.getYesPancreas());
+        this.pancreas.setText(String.valueOf(player.getPancreas()));
+        player.setLungs(player.getYesLungs());
+        this.lungs.setText(String.valueOf(player.getLungs()));
     }
 
 
