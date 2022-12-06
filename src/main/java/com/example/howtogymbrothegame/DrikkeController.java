@@ -92,6 +92,38 @@ public class DrikkeController implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+    @FXML
+    private void drinkingBeer() {
+        player.setLiver(player.getYesLiver());
+        this.heart.setText(String.valueOf(player.getHeart()));
+    }
 
+    boolean answered = false;
+
+    public void getBeer(ActionEvent event) {
+        String myBeer = myChoiceBox.getValue();
+
+        if (answered == false) {
+            if (myBeer.equals("1-5 cigaretter")) {
+                drinkingBeer();
+                answered = true;
+            } else if (myBeer.equals("6-11 cigaretter")) {
+                drinkingBeer();
+                answered = true;
+            } else if (myBeer.equals("12-17 cigaretter")) {
+                drinkingBeer();
+                answered = true;
+            } else if (myBeer.equals("18-23 cigaretter")) {
+                drinkingBeer();
+                answered = true;
+            } else if (myBeer.equals("24-29 cigaretter")) {
+                drinkingBeer();
+                answered = true;
+            } else {
+                this.heart.setText(String.valueOf(player.getHeart()));
+                answered = true;
+            }
+        }
+    }
 
 }
