@@ -2,125 +2,21 @@ package com.example.howtogymbrothegame;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+
 import javafx.scene.control.Label;
-import javafx.scene.control.Tab;
 
 import java.io.IOException;
+
+
 
 public class OverviewController {
     //connection to PlayerManager
     PlayerManager playerOverview = PlayerManager.getInstance();
 
     //method to update all labels
-    public void displayOverview(){
-        overviewTab1();
-        overviewTab2();
-        overviewTab3();
-        overviewTab4();
-        overviewTab5();
-    }
-
-
-    //Attributes and methods for tab1
-    @FXML
-    private Tab stats;
-    @FXML
-    private Label heartOverview;
-    @FXML
-    private Label lungsOverview;
-    @FXML
-    private Label liverOverview;
-    @FXML
-    private Label pancreasOverview;
-
-    private void overviewTab1(){
-        heartOverview.setText(String.valueOf(playerOverview.getHeart()));
-        lungsOverview.setText(String.valueOf(playerOverview.getLungs()));
-        liverOverview.setText(String.valueOf(playerOverview.getLiver()));
-        pancreasOverview.setText(String.valueOf(playerOverview.getPancreas()));
-    }
-
-
-    //Attributes and methods for tab2
-    @FXML
-    private Tab stats3mo;
-    @FXML
-    private Label heartOverview3mo;
-    @FXML
-    private Label lungsOverview3mo;
-    @FXML
-    private Label liverOverview3mo;
-    @FXML
-    private Label pancreasOverview3mo;
-
-    private void overviewTab2(){
-        heartOverview3mo.setText(String.valueOf(getHeart3mo()));
-        lungsOverview3mo.setText(String.valueOf(getLungs3mo()));
-        liverOverview3mo.setText(String.valueOf(getLiver3mo()));
-        pancreasOverview3mo.setText(String.valueOf(getPancreas3mo()));
-    }
-
-
-    //Attributes and methods for tab3
-    @FXML
-    private Tab stats6mo;
-    @FXML
-    private Label heartOverview6mo;
-    @FXML
-    private Label lungsOverview6mo;
-    @FXML
-    private Label liverOverview6mo;
-    @FXML
-    private Label pancreasOverview6mo;
-
-    private void overviewTab3(){
-        heartOverview6mo.setText(String.valueOf(getHeart6mo()));
-        lungsOverview6mo.setText(String.valueOf(getLungs6mo()));
-        liverOverview6mo.setText(String.valueOf(getLiver6mo()));
-        pancreasOverview6mo.setText(String.valueOf(getPancreas6mo()));
-    }
 
 
 
-    //Attributes and methods for tab4
-    @FXML
-    private Tab stats9mo;
-    @FXML
-    private Label heartOverview9mo;
-    @FXML
-    private Label lungsOverview9mo;
-    @FXML
-    private Label liverOverview9mo;
-    @FXML
-    private Label pancreasOverview9mo;
-
-    private void overviewTab4(){
-        heartOverview9mo.setText(String.valueOf(getHeart9mo()));
-        lungsOverview9mo.setText(String.valueOf(getLungs9mo()));
-        liverOverview9mo.setText(String.valueOf(getLiver9mo()));
-        pancreasOverview9mo.setText(String.valueOf(getPancreas9mo()));
-    }
-
-
-
-    //Attributes and methods for tab5
-    @FXML
-    private Tab stats12mo;
-    @FXML
-    private Label heartOverview12mo;
-    @FXML
-    private Label lungsOverview12mo;
-    @FXML
-    private Label liverOverview12mo;
-    @FXML
-    private Label pancreasOverview12mo;
-
-    private void overviewTab5(){
-        heartOverview12mo.setText(String.valueOf(getHeart12mo()));
-        lungsOverview12mo.setText(String.valueOf(getLungs12mo()));
-        liverOverview12mo.setText(String.valueOf(getLiver12mo()));
-        pancreasOverview12mo.setText(String.valueOf(getPancreas12mo()));
-    }
 
     //Attributes and methods to show progress over the months
     //3 months
@@ -131,21 +27,21 @@ public class OverviewController {
 
     //6 months
     private double lungs6mo = (playerOverview.getLungs()-50)*4*6+50;
-    private double heart6mo = (playerOverview.getLungs()-50)*4*6+50;
-    private double liver6mo = (playerOverview.getLungs()-50)*4*6+50;
-    private double pancreas6mo = (playerOverview.getLungs()-50)*4*6+50;
+    private double heart6mo = (playerOverview.getHeart()-50)*4*6+50;
+    private double liver6mo = (playerOverview.getLiver()-50)*4*6+50;
+    private double pancreas6mo = (playerOverview.getPancreas()-50)*4*6+50;
 
     //9 months
     private double lungs9mo = (playerOverview.getLungs()-50)*4*9+50;
-    private double heart9mo = (playerOverview.getLungs()-50)*4*9+50;
-    private double liver9mo = (playerOverview.getLungs()-50)*4*9+50;
-    private double pancreas9mo = (playerOverview.getLungs()-50)*4*9+50;
+    private double heart9mo = (playerOverview.getHeart()-50)*4*9+50;
+    private double liver9mo = (playerOverview.getLiver()-50)*4*9+50;
+    private double pancreas9mo = (playerOverview.getPancreas()-50)*4*9+50;
 
     //12 months
     private double lungs12mo = (playerOverview.getLungs()-50)*4*12+50;
-    private double heart12mo = (playerOverview.getLungs()-50)*4*12+50;
-    private double liver12mo = (playerOverview.getLungs()-50)*4*12+50;
-    private double pancreas12mo = (playerOverview.getLungs()-50)*4*12+50;
+    private double heart12mo = (playerOverview.getHeart()-50)*4*12+50;
+    private double liver12mo = (playerOverview.getLiver()-50)*4*12+50;
+    private double pancreas12mo = (playerOverview.getPancreas()-50)*4*12+50;
 
 
     public double getLungs3mo() {
@@ -205,5 +101,51 @@ public class OverviewController {
     }
 
 
+    @FXML
+    private Label heartOverview;
+    @FXML
+    private Label lungsOverview;
+    @FXML
+    private Label liverOverview;
+    @FXML
+    private Label pancreasOverview;
+
+
+    //method to update all labels
+    @FXML
+    public void overviewNow(){
+        heartOverview.setText(String.valueOf(playerOverview.getHeart()));
+        lungsOverview.setText(String.valueOf(playerOverview.getLungs()));
+        liverOverview.setText(String.valueOf(playerOverview.getLungs()));
+        pancreasOverview.setText(String.valueOf(playerOverview.getPancreas()));
+    }
+    @FXML
+    private void overview3mo(){
+        heartOverview.setText(String.valueOf(getHeart3mo()));
+        lungsOverview.setText(String.valueOf(getLungs3mo()));
+        liverOverview.setText(String.valueOf(getLiver3mo()));
+        pancreasOverview.setText(String.valueOf(getPancreas3mo()));
+    }
+    @FXML
+    private void overview6mo(){
+        heartOverview.setText(String.valueOf(getHeart6mo()));
+        lungsOverview.setText(String.valueOf(getLungs6mo()));
+        liverOverview.setText(String.valueOf(getLiver6mo()));
+        pancreasOverview.setText(String.valueOf(getPancreas6mo()));
+    }
+    @FXML
+    private void overview9mo(){
+        heartOverview.setText(String.valueOf(getHeart9mo()));
+        lungsOverview.setText(String.valueOf(getLungs9mo()));
+        liverOverview.setText(String.valueOf(getLiver9mo()));
+        pancreasOverview.setText(String.valueOf(getPancreas9mo()));
+    }
+    @FXML
+    private void overview12mo(){
+        heartOverview.setText(String.valueOf(getHeart12mo()));
+        lungsOverview.setText(String.valueOf(getLungs12mo()));
+        liverOverview.setText(String.valueOf(getLiver12mo()));
+        pancreasOverview.setText(String.valueOf(getPancreas12mo()));
+    }
 
 }
