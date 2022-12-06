@@ -178,6 +178,7 @@ public class Activities {
 
     //Fitness
 
+
     //Rygeskur
     @FXML
     private Button btn1;
@@ -239,6 +240,21 @@ public class Activities {
         player.setPancreas(player.getYesPancreas());
         this.pancreas.setText(String.valueOf(player.getPancreas()));
         this.factsInfo.setText(unHealthy + unHealthyTwo + unHealthyThree);
+    }
+    //Fitness
+    @FXML
+    private void exercise(){
+        player.setHeart(player.getNoHeart());
+        this.heart.setText(String.valueOf(player.getHeart()));
+
+        player.setLungs(player.getNoLungs());
+        this.lungs.setText(String.valueOf(player.getLungs()));
+
+        player.setLiver(player.getNoLiver());
+        this.liver.setText(String.valueOf(player.getLiver()));
+
+        player.setPancreas(player.getNoPancreas());
+        this.pancreas.setText(String.valueOf(player.getPancreas()));
     }
 
     @FXML

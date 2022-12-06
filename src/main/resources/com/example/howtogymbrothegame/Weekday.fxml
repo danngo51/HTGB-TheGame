@@ -42,7 +42,7 @@
          </image>
       </ImageView>
       <ImageView fitHeight="103.0" fitWidth="124.0" layoutX="392.0" layoutY="134.0" pickOnBounds="true" preserveRatio="true" />
-      <Label layoutX="436.0" layoutY="-14.0" prefHeight="154.0" prefWidth="419.0" text="Monday to thursday">
+      <Label fx:id="weekdayLabel" layoutX="453.0" prefHeight="117.0" prefWidth="431.0" text="Weekday">
          <font>
             <Font size="48.0" />
          </font>
