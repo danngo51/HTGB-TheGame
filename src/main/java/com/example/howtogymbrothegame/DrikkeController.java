@@ -56,7 +56,7 @@ public class DrikkeController implements Initializable {
     private void displayValue(String answer){
         String beer = myChoiceBox.getValue();
         if (beer.equals("0 øl")){
-            tekstDrikke.setText("Du har valgt at drikke 0 øl. Det var et super godt valg!" + "\n" + "\n" + "Da du har valgt at lade være med at drikke, har du forbedret adskillige ting ved dit helbred." + "\n" + "\n" + "Du kan eksempelvis opleve, at dine søvnforstyrrelser forsvinder efter nogle måneder uden at indtage alkohol." + "\n" + "Kroppens stressberedskab bliver også normal 1-4 uger efter ophør. ");
+            tekstDrikke.setText("Du har valgt at drikke 0 øl. Det var et super godt valg!" + "\n" + "\n" + "Da du har valgt at lade være med at drikke, har du forbedret adskillige ting ved dit helbred." + "\n" + "\n" + "Du kan eksempelvis opleve, at dine søvnforstyrrelser forsvinder efter nogle måneder uden at indtage alkohol." + "\n" + "Kroppens stressberedskab bliver også normal 1-4 uger efter ophør.");
         }
         else if (beer.equals("1 øl")){
             tekstDrikke.setText("Du har valgt at drikke 1 øl. Det er helt i orden at drikke én genstand alkohol en gang i mellem!" + "\n" + "\n" + "Risikoen for skader på grund af alkohol øges, hvis man drikker mere end 10 genstande om ugen, og når man drikker 4 genstande eller mere ved en enkelt lejlighed." + "\n" + "\n" + "Der er dog undersøgelser, som viser, at der ikke er nogen nedre grænse for, hvor lidt man skal drikke, for at øge risikoen for brystkræft.");
