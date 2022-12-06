@@ -49,8 +49,8 @@
             <Font size="45.0" />
          </font>
       </Label>
-      <Rectangle fill="#05071f" height="134.0" layoutX="256.0" stroke="#05071f" strokeType="INSIDE" width="1024.0" />
-      <Label fx:id="Headline" layoutX="330.0" layoutY="36.0" text="Nuværende stat" textFill="WHITE">
+      <Rectangle fill="#080b30" height="134.0" layoutX="256.0" stroke="#05071f" strokeType="INSIDE" width="1024.0" />
+      <Label fx:id="headline" layoutX="330.0" layoutY="36.0" text="Nuværende stats" textFill="WHITE">
          <font>
             <Font size="35.0" />
          </font>

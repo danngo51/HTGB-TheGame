@@ -100,7 +100,8 @@ public class OverviewController {
         doorConnection.switchToMainHub(event);
     }
 
-
+    @FXML
+    private Label headline;
     @FXML
     private Label heartOverview;
     @FXML
@@ -114,6 +115,7 @@ public class OverviewController {
     //method to update all labels
     @FXML
     public void overviewNow(){
+        headline.setText("Nuværende stats");
         heartOverview.setText(String.valueOf(playerOverview.getHeart()));
         lungsOverview.setText(String.valueOf(playerOverview.getLungs()));
         liverOverview.setText(String.valueOf(playerOverview.getLungs()));
@@ -121,6 +123,7 @@ public class OverviewController {
     }
     @FXML
     private void overview3mo(){
+        headline.setText("Efter 3 måneder");
         heartOverview.setText(String.valueOf(getHeart3mo()));
         lungsOverview.setText(String.valueOf(getLungs3mo()));
         liverOverview.setText(String.valueOf(getLiver3mo()));
@@ -128,6 +131,7 @@ public class OverviewController {
     }
     @FXML
     private void overview6mo(){
+        headline.setText("Efter 6 måneder");
         heartOverview.setText(String.valueOf(getHeart6mo()));
         lungsOverview.setText(String.valueOf(getLungs6mo()));
         liverOverview.setText(String.valueOf(getLiver6mo()));
@@ -135,6 +139,7 @@ public class OverviewController {
     }
     @FXML
     private void overview9mo(){
+        headline.setText("Efter 9 måneder");
         heartOverview.setText(String.valueOf(getHeart9mo()));
         lungsOverview.setText(String.valueOf(getLungs9mo()));
         liverOverview.setText(String.valueOf(getLiver9mo()));
@@ -142,6 +147,7 @@ public class OverviewController {
     }
     @FXML
     private void overview12mo(){
+        headline.setText("Efter 12 måneder");
         heartOverview.setText(String.valueOf(getHeart12mo()));
         lungsOverview.setText(String.valueOf(getLungs12mo()));
         liverOverview.setText(String.valueOf(getLiver12mo()));
