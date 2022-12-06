@@ -239,19 +239,6 @@ public class Activities {
         this.lungs.setText(String.valueOf(player.getLungs()));
     }
 
-    @FXML
-    private void notDoingDrugs() {
-        player.setHeart(player.getYesHeart());
-        this.heart.setText(String.valueOf(player.getHeart()));
-        player.setLiver(player.getYesLiver());
-        this.liver.setText(String.valueOf(player.getLiver()));
-        player.setPancreas(player.getYesPancreas());
-        this.pancreas.setText(String.valueOf(player.getPancreas()));
-        player.setLungs(player.getYesLungs());
-        this.lungs.setText(String.valueOf(player.getLungs()));
-    }
-
-
     //pop-up boks
 
     //Drikke

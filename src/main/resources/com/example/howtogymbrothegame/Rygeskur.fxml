@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -8,9 +9,10 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.howtogymbrothegame.Activities">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.howtogymbrothegame.rygeDrugsController">
    <children>
       <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="720" prefWidth="1280">
          <children>
@@ -68,29 +70,31 @@
                         <Font size="15.0" />
                      </font>
                   </Label>
-                  <TextFlow layoutX="30.0" layoutY="215.0" prefHeight="480.0" prefWidth="240.0" />
+                  <TextFlow layoutX="30.0" layoutY="215.0" prefHeight="480.0" prefWidth="240.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Velkommen til din lokale ryge bar.&#10;&#10;Her har du mulihged for at ryge lige så meget som du ville, og hvis du føler dig ekstra spicy, så har vi også noget lidt stærke, wink, wink.&#10;&#10;For at ryge eller tage stoffer, skal du klikke på følgende:&#10;- Cigaretpakken som ligger på den venstre sofa.&#10;- Pillerne som ligger på den højre sofa." />
+                     </children></TextFlow>
                </children>
             </Pane>
             <Pane prefHeight="720.0" prefWidth="980.0">
                <children>
-                  <Button layoutX="-23.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchtoWeekDays" prefHeight="7.0" prefWidth="100.0" rotate="-90.0" text="EXIT" />
                   <ImageView fitHeight="737.0" fitWidth="1002.0" layoutX="-22.0" layoutY="-11.0">
                      <image>
-                        <Image url="@../../../../../Images/RygeskurInterior.PNG" />
+                        <Image url="file:src/Images/RygeskurInterior.PNG" />
                      </image>
                   </ImageView>
+                  <Button layoutX="-23.0" layoutY="348.0" mnemonicParsing="false" onAction="#switchtoWeekDays" prefHeight="7.0" prefWidth="100.0" rotate="-90.0" text="EXIT" />
                   <ImageView fitHeight="36.0" fitWidth="40.0" layoutX="434.0" layoutY="425.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../Images/Cigaretter.png" />
+                        <Image url="file:src/Images/Cigaretter.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="30.0" fitWidth="38.0" layoutX="729.0" layoutY="435.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="30.0" fitWidth="38.0" layoutX="729.0" layoutY="435.0" onMouseClicked="#doingDrugs" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../Images/drugs.png" />
+                        <Image url="file:src/Images/drugs.png" />
                      </image>
                   </ImageView>
-                  <Button fx:id="btn1" layoutX="416.0" layoutY="461.0" mnemonicParsing="false" onAction="#handleButtonEvent" text="Cigaretter" />
-                  <Button fx:id="btn2" layoutX="721.0" layoutY="462.0" mnemonicParsing="false" onAction="#handleButtonEvent" text="Drugs" />
+                  <ChoiceBox fx:id="choiceBoxRyge" layoutX="377.0" layoutY="461.0" prefWidth="150.0" />
                </children>
             </Pane>
          </children>

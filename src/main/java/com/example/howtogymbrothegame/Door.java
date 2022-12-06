@@ -95,7 +95,7 @@ public class Door {
         FXMLLoader smokingLoader = new FXMLLoader(getClass().getResource("Rygeskur.fxml"));
         root = smokingLoader.load();
 
-        Activities smoking = smokingLoader.getController();
+        rygeDrugsController smoking = smokingLoader.getController();
         smoking.displayStats(pancreasVal, liverVal, heartVal, lungsVal);
 
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
