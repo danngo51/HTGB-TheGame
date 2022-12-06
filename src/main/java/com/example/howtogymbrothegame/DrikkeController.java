@@ -11,9 +11,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -60,16 +58,19 @@ public class DrikkeController implements Initializable {
     private void displayValue(ActionEvent event){
         String beer = myChoiceBox.getValue();
         if (beer.equals("0 øl")){
-            tekstDrikke.setText("EEEEEE.");
+            tekstDrikke.setText("Du har valgt at drikke 0 øl. Det var et super godt valg!" + "\n" + "\n" + "Da du har valgt at lade være med at drikke, har du forbedret adskillige ting ved dit helbred." + "\n" + "\n" + "Du kan eksempelvis opleve, at dine søvnforstyrrelser forsvinder efter nogle måneder uden at indtage alkohol." + "\n" + "Kroppens stressberedskab bliver også normalt 1-4 uger efter ophør. ");
         }
         else if (beer.equals("1 øl")){
-            tekstDrikke.setText("AAAAAA");
+            tekstDrikke.setText("Du har valgt at drikke 1 øl. Det er helt i orden at drikke én genstand alkohol en gang i mellem!" + "\n" + "\n" + "Risikoen for skader på grund af alkohol øges, hvis man drikker mere end 10 genstande om ugen, og når man drikker 4 genstande eller mere ved en enkelt lejlighed." + "\n" + "\n" + "Der er dog undersøgelser, som viser, at der ikke er nogen nedre grænse for, hvor lidt man skal drikke, for at øge risikoen for brystkræft.");
         }
         else if (beer.equals("2 øl")){
-            tekstDrikke.setText("UUUUU");
+            tekstDrikke.setText("Du har valgt at drikke 2 øl." + "\n" + "\n" + "Du nærmer dig grænsen for øget risiko for skader på grund af indtagelse af alkohol." +"\n" + "\n" +"Ammende mødre anbefales at være tilbageholdende med at drikke alkohol og derfor ikke drikke mere end én genstand ved en begivenhed eller på en dag.");
+        }
+        else if (beer.equals("3 øl")){
+            tekstDrikke.setText("Du har valgt at drikke 3 øl." + "\n" + "\n" + "Et langvarigt indtag på mere end 30 gram alkohol (Altså 3 øl) dagligt vil øge risikoen for leversygdomme." + "\n" + "\n" + "Konsekvenserne ved for højt alkoholindtag kan føre til lever-hepatitis (Inflammatorisk tilstand i leveren), som kan føre til svimmelhed, mangel på appetit, massivt vægttab og Gulsot (Hud og slimhinder bliver gullige).");
         }
         else {
-            tekstDrikke.setText("IIIIII");
+            tekstDrikke.setText("Du har valgt at drikke 4 øl." + "\n" + "\n" + "Du har nu officielt øget din risiko for adskillige sygdomme." + "\n" + "\n" + "Hvis du drikker store mængder alkohol gennem længere tid, stiger risikoen for at udvikle mere end 200 medicinske tilstande og sygdomme" + "\n" + "\n" + "Det er i sær sygdomme i hjernen og nervesystemet, leversygomme, betændelse i bugspytkirtlen, forhøjet blodtryk blødninger og slagtilfælde, der er tale om." + "\n" + "\n" + "Du har derfor nu mistet 0,1 i alle dine stats.");
         }
     }
     private void loadData(){
@@ -78,7 +79,8 @@ public class DrikkeController implements Initializable {
         String b = "1 øl";
         String c = "2 øl";
         String d = "3 øl";
-        list.addAll(a, b, c, d);
+        String e = "4 øl";
+        list.addAll(a, b, c, d, e);
         myChoiceBox.getItems().addAll(list);
     }
     @FXML
