@@ -129,7 +129,11 @@ public class Door {
     public void switchToMTT(MouseEvent event) throws IOException {
         //Access to friday
         access.setAccessFriday(true);
-        lockFriday.setVisible(false);
+
+        access.setmTT(true);
+        access.setFriday(false);
+        access.setSaturday(false);
+        access.setSunday(false);
 
         //load stage
         FXMLLoader monToThurLoader = new FXMLLoader(getClass().getResource("Weekday.fxml"));
@@ -150,6 +154,11 @@ public class Door {
         if (access.isAccessFriday()) {
             //allowing to enter saturday
             access.setAccessSaturday(true);
+
+            access.setmTT(false);
+            access.setFriday(true);
+            access.setSaturday(false);
+            access.setSunday(false);
 
             //load stage
             FXMLLoader fridayLoader = new FXMLLoader(getClass().getResource("Weekday.fxml"));
@@ -174,6 +183,11 @@ public class Door {
             //allowing to enter sunday
             access.setAccessSunday(true);
 
+            access.setmTT(false);
+            access.setFriday(false);
+            access.setSaturday(true);
+            access.setSunday(false);
+
             //load stage
             FXMLLoader saturdayLoader = new FXMLLoader(getClass().getResource("Weekday.fxml"));
             root = saturdayLoader.load();
@@ -194,6 +208,11 @@ public class Door {
 
     public void switchToSunday(MouseEvent event) throws IOException {
         if (access.isAccessSunday()) {
+
+            access.setmTT(false);
+            access.setFriday(false);
+            access.setSaturday(false);
+            access.setSunday(true);
 
             //load stage
             FXMLLoader sundayLoader = new FXMLLoader(getClass().getResource("Weekday.fxml"));
@@ -227,4 +246,17 @@ public class Door {
         stage.setTitle("Overview");
         stage.show();
     }
+
+    public void test (MouseEvent event) throws IOException{
+        if (access.isSunday()){
+            switchToSunday(event);
+        } else if (access.isSaturday()){
+            switchToSaturday(event);
+        } else if (access.isFriday()){
+            switchToFriday(event);
+        } else {
+            switchToMTT(event);
+        }
+    }
+
 }

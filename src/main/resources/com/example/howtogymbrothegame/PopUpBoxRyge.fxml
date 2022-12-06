@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Slider?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
 
 <AnchorPane prefHeight="150.0" prefWidth="300.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.howtogymbrothegame.Activities">
    <children>
-      <Label layoutX="15.0" layoutY="10.0" text="Hvor mange cigaretter kunne du tænke dig at ryge?" />
-      <Label layoutX="15.0" layoutY="30.0" text="Læs faktaboks for konsekvenerne for din handling" />
-      <Slider layoutX="12.0" layoutY="54.0" majorTickUnit="10.0" max="40.0" minorTickCount="5" prefHeight="17.0" prefWidth="270.0" showTickLabels="true" showTickMarks="true" />
-      <Label layoutX="5.0" layoutY="100.0" text="Stats: ryge vil forudsagde -1 point på din stat &quot;Lunge&quot;" />
       <Button fx:id="btnBack" layoutX="120.0" layoutY="122.0" mnemonicParsing="false" onAction="#handleButtonEvent" prefHeight="13.0" prefWidth="59.0" text="Tilbage" />
+      <TextFlow prefHeight="100.0" prefWidth="300.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Langvarig rygning på mellem 1-4 cigaretter dagligt vil signifikant øge risikoen for at dø af hjertesygdomme.&#10;Konsekvenserne ved for højt tobaksindtag kan føre til iskæmi, som nedsætter blodtilgang til dele af hjertemusklen.&#10;Dette kan derudover føre til adskillige former for cancer.&#10;Rygning øger også risikoen for lungekræft og kronisk obstruktiv lungesygdom (KOL).&#10;Vil du virkelig udsætte dig selv for det?">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </TextFlow>
    </children>
 </AnchorPane>
