@@ -73,17 +73,17 @@
          <children>
             <ImageView fitHeight="728.0" fitWidth="996.0" layoutX="-16.0" layoutY="-6.0" pickOnBounds="true">
                <image>
-                  <Image url="@../../../../../Images/GymInterior.PNG" />
+                  <Image url="file:src/Images/GymInterior.PNG" />
                </image>
             </ImageView>
             <ImageView fitHeight="223.0" fitWidth="187.0" layoutX="540.0" layoutY="371.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Images/Girllifting2.gif" />
+                  <Image url="file:src/Images/Girllifting2.gif" />
                </image>
             </ImageView>
             <ImageView fitHeight="196.0" fitWidth="222.0" layoutX="744.0" layoutY="404.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../Images/Boylifting.gif" />
+                  <Image url="file:src/Images/Boylifting.gif" />
                </image>
             </ImageView>
             <ImageView fitHeight="333.0" fitWidth="274.0" layoutX="26.0" layoutY="398.0" onMouseClicked="#exercise" pickOnBounds="true" preserveRatio="true">
