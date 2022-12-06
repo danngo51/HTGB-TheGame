@@ -51,7 +51,6 @@ public class DrikkeController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loadData();
-        myChoiceBox.setValue("0 øl");
     }
 
     @FXML
@@ -95,7 +94,7 @@ public class DrikkeController implements Initializable {
     @FXML
     private void drinkingBeer() {
         player.setLiver(player.getYesLiver());
-        this.heart.setText(String.valueOf(player.getHeart()));
+        this.liver.setText(String.valueOf(player.getLiver()));
     }
 
     boolean answered = false;
@@ -104,23 +103,23 @@ public class DrikkeController implements Initializable {
         String myBeer = myChoiceBox.getValue();
 
         if (answered == false) {
-            if (myBeer.equals("1-5 cigaretter")) {
+            if (myBeer.equals("0 øl")) {
                 drinkingBeer();
                 answered = true;
-            } else if (myBeer.equals("6-11 cigaretter")) {
+            } else if (myBeer.equals("1 øl")) {
                 drinkingBeer();
                 answered = true;
-            } else if (myBeer.equals("12-17 cigaretter")) {
+            } else if (myBeer.equals("2 øl")) {
                 drinkingBeer();
                 answered = true;
-            } else if (myBeer.equals("18-23 cigaretter")) {
+            } else if (myBeer.equals("3 øl")) {
                 drinkingBeer();
                 answered = true;
-            } else if (myBeer.equals("24-29 cigaretter")) {
+            } else if (myBeer.equals("4 øl")) {
                 drinkingBeer();
                 answered = true;
             } else {
-                this.heart.setText(String.valueOf(player.getHeart()));
+                this.liver.setText(String.valueOf(player.getLiver()));
                 answered = true;
             }
         }
