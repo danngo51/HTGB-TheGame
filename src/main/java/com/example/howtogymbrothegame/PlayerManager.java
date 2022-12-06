@@ -249,4 +249,6 @@ public class PlayerManager {
     public double getNoAllPancreas() {
         return noAllPancreas;
     }
+
+
 } //end of class
