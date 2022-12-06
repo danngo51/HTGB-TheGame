@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
@@ -21,7 +22,9 @@ public class Door {
 
     PlayerManager player = PlayerManager.getInstance();
 
-
+    //Attributes
+    @FXML
+    Label weekdayLabel;
     @FXML
     ImageView lockFriday;
     @FXML
@@ -127,7 +130,14 @@ public class Door {
         //Access to friday
         access.setAccessFriday(true);
         lockFriday.setVisible(false);
-        root = FXMLLoader.load(getClass().getResource("Weekday.fxml"));
+
+        //load stage
+        FXMLLoader monToThurLoader = new FXMLLoader(getClass().getResource("Weekday.fxml"));
+        root = monToThurLoader.load();
+
+        Door monToThur = monToThurLoader.getController();
+        monToThur.weekdayLabel.setText("Mandag til torsdag");
+
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
@@ -141,8 +151,13 @@ public class Door {
             //allowing to enter saturday
             access.setAccessSaturday(true);
 
-            //load scene
-            root = FXMLLoader.load(getClass().getResource("Weekday.fxml"));
+            //load stage
+            FXMLLoader fridayLoader = new FXMLLoader(getClass().getResource("Weekday.fxml"));
+            root = fridayLoader.load();
+
+            Door friday = fridayLoader.getController();
+            friday.weekdayLabel.setText("Fredag");
+
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
@@ -159,8 +174,13 @@ public class Door {
             //allowing to enter sunday
             access.setAccessSunday(true);
 
-            //load scene
-            root = FXMLLoader.load(getClass().getResource("Weekday.fxml"));
+            //load stage
+            FXMLLoader saturdayLoader = new FXMLLoader(getClass().getResource("Weekday.fxml"));
+            root = saturdayLoader.load();
+
+            Door saturday = saturdayLoader.getController();
+            saturday.weekdayLabel.setText("Lørdag");
+
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
@@ -174,7 +194,14 @@ public class Door {
 
     public void switchToSunday(MouseEvent event) throws IOException {
         if (access.isAccessSunday()) {
-            root = FXMLLoader.load(getClass().getResource("Weekday.fxml"));
+
+            //load stage
+            FXMLLoader sundayLoader = new FXMLLoader(getClass().getResource("Weekday.fxml"));
+            root = sundayLoader.load();
+
+            Door sunday = sundayLoader.getController();
+            sunday.weekdayLabel.setText("Søndag");
+
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             scene = new Scene(root);
             stage.setScene(scene);
