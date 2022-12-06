@@ -87,7 +87,7 @@
             </image>
          </ImageView>
          <ChoiceBox fx:id="myChoiceBox" layoutX="250.0" layoutY="390.0" minHeight="15.0" prefHeight="21.0" prefWidth="80.0" />
-         <Button layoutX="335.0" layoutY="389.0" mnemonicParsing="false" onAction="#displayValue" text="Submit" />
+         <Button layoutX="335.0" layoutY="389.0" mnemonicParsing="false" onAction="#submitBeer" text="Submit" />
         </children>
     </Pane>
 </AnchorPane>

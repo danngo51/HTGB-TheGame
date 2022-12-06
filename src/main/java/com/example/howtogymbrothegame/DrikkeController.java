@@ -54,7 +54,7 @@ public class DrikkeController implements Initializable {
     }
 
     @FXML
-    private void displayValue(ActionEvent event){
+    private void displayValue(String answer){
         String beer = myChoiceBox.getValue();
         if (beer.equals("0 øl")){
             tekstDrikke.setText("Du har valgt at drikke 0 øl. Det var et super godt valg!" + "\n" + "\n" + "Da du har valgt at lade være med at drikke, har du forbedret adskillige ting ved dit helbred." + "\n" + "\n" + "Du kan eksempelvis opleve, at dine søvnforstyrrelser forsvinder efter nogle måneder uden at indtage alkohol." + "\n" + "Kroppens stressberedskab bliver også normalt 1-4 uger efter ophør. ");
@@ -69,7 +69,7 @@ public class DrikkeController implements Initializable {
             tekstDrikke.setText("Du har valgt at drikke 3 øl." + "\n" + "\n" + "Et langvarigt indtag på mere end 30 gram alkohol (Altså 3 øl) dagligt vil øge risikoen for leversygdomme." + "\n" + "\n" + "Konsekvenserne ved for højt alkoholindtag kan føre til lever-hepatitis (Inflammatorisk tilstand i leveren), som kan føre til svimmelhed, mangel på appetit, massivt vægttab og Gulsot (Hud og slimhinder bliver gullige).");
         }
         else {
-            tekstDrikke.setText("Du har valgt at drikke 4 øl." + "\n" + "\n" + "Du har nu officielt øget din risiko for adskillige sygdomme." + "\n" + "\n" + "Hvis du drikker store mængder alkohol gennem længere tid, stiger risikoen for at udvikle mere end 200 medicinske tilstande og sygdomme" + "\n" + "\n" + "Det er i sær sygdomme i hjernen og nervesystemet, leversygomme, betændelse i bugspytkirtlen, forhøjet blodtryk blødninger og slagtilfælde, der er tale om." + "\n" + "\n" + "Du har derfor nu mistet 0,1 i alle dine stats.");
+            tekstDrikke.setText("Du har valgt at drikke 4 øl." + "\n" + "\n" + "Du har nu officielt øget din risiko for adskillige sygdomme." + "\n" + "\n" + "Hvis du drikker store mængder alkohol gennem længere tid, stiger risikoen for at udvikle mere end 200 medicinske tilstande og sygdomme" + "\n" + "\n" + "Det er i sær sygdomme i hjernen og nervesystemet, leversygomme, betændelse i bugspytkirtlen, forhøjet blodtryk blødninger og slagtilfælde, der er tale om." + "\n" + "\n" + "Du har derfor mistet 0,1 i alle dine stats.");
         }
     }
     private void loadData(){
@@ -96,26 +96,21 @@ public class DrikkeController implements Initializable {
         player.setLiver(player.getYesLiver());
         this.liver.setText(String.valueOf(player.getLiver()));
     }
-
     boolean answered = false;
 
-    public void getBeer(ActionEvent event) {
+    public String getBeer(ActionEvent event) {
         String myBeer = myChoiceBox.getValue();
 
         if (answered == false) {
-            if (myBeer.equals("0 øl")) {
-                drinkingBeer();
-                answered = true;
-            } else if (myBeer.equals("1 øl")) {
-                drinkingBeer();
-                answered = true;
-            } else if (myBeer.equals("2 øl")) {
-                drinkingBeer();
-                answered = true;
-            } else if (myBeer.equals("3 øl")) {
-                drinkingBeer();
-                answered = true;
-            } else if (myBeer.equals("4 øl")) {
+            displayValue(myBeer);
+            }
+
+        return beerAnswer = myChoiceBox.getValue();
+    }
+    String beerAnswer;
+    public void submitBeer(ActionEvent event){
+        if (answered == false) {
+            if (beerAnswer.equals("4 øl")) {
                 drinkingBeer();
                 answered = true;
             } else {
@@ -124,5 +119,4 @@ public class DrikkeController implements Initializable {
             }
         }
     }
-
 }
