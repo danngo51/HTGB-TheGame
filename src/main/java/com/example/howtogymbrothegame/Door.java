@@ -109,7 +109,7 @@ public class Door {
         FXMLLoader drinkingLoader = new FXMLLoader(getClass().getResource("Drikke.fxml"));
         root = drinkingLoader.load();
 
-        Activities drinking = drinkingLoader.getController();
+        DrikkeController drinking = drinkingLoader.getController();
         drinking.displayStats(pancreasVal, liverVal, heartVal, lungsVal);
 
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
