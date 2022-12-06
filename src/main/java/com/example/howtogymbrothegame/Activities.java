@@ -234,9 +234,9 @@ public class Activities {
 
     @FXML
     private void eatingUnhealthy(){
-        String unHealthy = "Et langvarigt indtag af dårlig kost kan føre til adskillige sygdomme.\n \n Konsekvenserne ved en dårlig kost vil blandt andet føre til: \n \n";
+        String unHealthy = "Et langvarigt indtag af dårlig kost kan føre til adskillige sygdomme.\n \nKonsekvenserne ved en dårlig kost vil blandt andet føre til: \n \n";
         String unHealthyTwo = "Hjertekar-sygdomme, som kommer af forhøjet kolesterol, forhøjet blodtryk og overvægt. Chancen for diabetes type 2 bliver forøget ved at være overvægt, som kan føre til hyppige infektioner. \n \n";
-        String unHealthyThree = "Kræft i spiserør, tyktarm, bryst, livmoder, bugspytskirtel og nyre, som kommer af overvægt. \n \n Vil du virkelig udsætte dig selv for det?";
+        String unHealthyThree = "Kræft i spiserør, tyktarm, bryst, livmoder, bugspytskirtel og nyre, som kommer af overvægt. \n \nVil du virkelig udsætte dig selv for det?";
         player.setHeart(player.getYesHeart());
         this.heart.setText(String.valueOf(player.getHeart()));
         player.setPancreas(player.getYesPancreas());

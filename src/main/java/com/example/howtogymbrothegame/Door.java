@@ -211,20 +211,20 @@ public class Door {
         else {
             System.out.println("ingen adgang søndag");
         }
-
     }
 
-    public void logout(ActionEvent event){
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Logout");
-        alert.setHeaderText("Du er ved at logge ud");
+    public void overviewButton(ActionEvent event) throws IOException{
+        //load stage
+        FXMLLoader overviewLoader = new FXMLLoader(getClass().getResource("Overview.fxml"));
+        root = overviewLoader.load();
 
-        if (alert.showAndWait().get() == ButtonType.OK) {
-            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-            System.out.println("Du er nu logget ud!");
-            stage.close();
-        }
+        OverviewController overview = overviewLoader.getController();
+        overview.overviewNow();
 
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Overview");
+        stage.show();
     }
-
 }
