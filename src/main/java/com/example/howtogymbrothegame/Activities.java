@@ -6,8 +6,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -268,5 +270,19 @@ public class Activities {
         this.pancreas.setText(String.valueOf(player.getPancreas()));
         this.factsInfo.setText(healthy + healthyTwo + healthyThree);
     }
+    @FXML
+    public void CanteenGame(MouseEvent event){
+        try {
+            FXMLLoader canteenGameLoader = new FXMLLoader(getClass().getResource("canteenGame.fxml"));
+            Parent gameRoot = (Parent) canteenGameLoader.load();
 
+            stage = new Stage();
+            stage.setScene(new Scene(gameRoot));
+            stage.setTitle("canteenGame");
+            stage.showAndWait();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
 }

@@ -68,7 +68,7 @@
                   <Font size="15.0" />
                </font>
             </Label>
-            <Text fx:id="factsInfo" layoutX="39.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Velkommen til kantinen!&#10;&#10;Mad er en stor del af at være sund, derfor står du nu overfor et &#10;valg.&#10;&#10;Vælger du at spise sundt, som forbedrer dine stats, eller vælger du at spise usundt, som vil negativt påvirke dine stats.&#10;&#10;&#10;" wrappingWidth="209.962158203125">
+            <Text fx:id="factsInfo" layoutX="39.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Velkommen til kantinen!&#10;&#10;Mad er en stor del af at være sund, derfor står du nu overfor et &#10;valg.&#10;&#10;Vælger du at spise sundt, som vil forbedree dine stats, eller vælger du at spise usundt, som vil negativt påvirke dine stats.&#10;&#10;&#10;&#10;&#10;" wrappingWidth="209.962158203125">
                <font>
                   <Font size="15.0" />
                </font></Text>
@@ -97,6 +97,7 @@
                   <Blend />
                </effect>
             </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="319.0" layoutX="19.0" layoutY="102.0" onMouseClicked="#CanteenGame" stroke="BLACK" strokeType="INSIDE" width="141.0" />
          </children>
       </Pane>
    </children>
