@@ -1,6 +1,7 @@
 package com.example.howtogymbrothegame;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -14,35 +15,26 @@ public class CanteenGameController {
     Stage stage;
     @FXML
     private AnchorPane scenePane;
+    PlayerManager player = PlayerManager.getInstance();
+
+    String pancreasVal = String.valueOf(player.getPancreas());
+    String liverVal = String.valueOf(player.getLiver());
+    String heartVal = String.valueOf(player.getHeart());
+    String lungsVal = String.valueOf(player.getLungs());
+
+    Activities stats = new Activities();
 
     @FXML
     private void closeGame() {
+        stats.displayStats(pancreasVal, liverVal, heartVal, lungsVal);
         stage = (Stage) scenePane.getScene().getWindow();
         stage.close();
     }
 
     @FXML
-    ImageView tomato;
+    ImageView tomato, cucumber, steakMeat, watermelon, carrot, chicken, bellpeper, rice, candy, soda, cake;
     @FXML
-    ImageView cucumber;
-    @FXML
-    ImageView steakMeat;
-    @FXML
-    ImageView watermelon;
-    @FXML
-    ImageView carrot;
-    @FXML
-    ImageView chicken;
-    @FXML
-    ImageView bellpeper;
-    @FXML
-    ImageView rice;
-    @FXML
-    ImageView candy;
-    @FXML
-    ImageView soda;
-    @FXML
-    ImageView cake;
+    ProgressBar healthMeter;
 
 
 
@@ -111,4 +103,27 @@ public class CanteenGameController {
         setItemScoreNegativ();
         cake.setVisible(false);
     }
+    @FXML
+    private void itemScoreSystem(){
+        if(itemScore >= 6){
+            player.setHeart(player.getNoHeart());
+            player.setLiver(player.getNoLiver());
+            player.setLungs(player.getNoLungs());
+            player.setPancreas(player.getNoPancreas());
+            healthMeter.setProgress(1);
+        } else if (itemScore >= 3) {
+            player.setHeart(player.getNoHeart());
+            player.setPancreas(player.getNoPancreas());
+            healthMeter.setProgress(0.5);
+        } else if (itemScore >= 1) {
+            player.setHeart(player.getNoHeart());
+            healthMeter.setProgress(0.25);
+        }else {
+            player.setHeart(player.getYesHeart());
+            player.setPancreas(player.getYesPancreas());
+            healthMeter.setProgress(0);
+        }
+    }
+
+
 }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -69,5 +70,6 @@
             <Image url="@../../../../../Images/watermelon.png" />
          </image>
       </ImageView>
+      <ProgressBar fx:id="healthMeter" layoutX="338.0" layoutY="124.0" onMouseClicked="#itemScoreSystem" prefHeight="20.0" prefWidth="144.0" progress="0.0" />
    </children>
 </AnchorPane>
