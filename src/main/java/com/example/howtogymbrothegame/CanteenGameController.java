@@ -25,7 +25,7 @@ public class CanteenGameController {
     }
 
     @FXML
-    ImageView tomato, cucumber, steakMeat, watermelon, carrot, chicken, bellpeper, rice, candy, soda, cake;
+    ImageView tomato, cucumber, steakMeat, watermelon, carrot, chicken, bellpepper, rice, candy, soda, cake;
     @FXML
     ProgressBar healthMeter;
 
@@ -34,11 +34,13 @@ public class CanteenGameController {
 
     private void setItemScorePositiv() {
         itemScore = itemScore + 1;
+        itemScoreSystem();
         System.out.println(itemScore);
     }
 
     private void setItemScoreNegativ() {
         itemScore = itemScore -1;
+        itemScoreSystem();
         System.out.println(itemScore);
     }
     @FXML
@@ -72,9 +74,9 @@ public class CanteenGameController {
         chicken.setVisible(false);
     }
     @FXML
-    private void bellpeper(MouseEvent event) {
+    private void bellpepper(MouseEvent event) {
         setItemScorePositiv();
-        bellpeper.setVisible(false);
+        bellpepper.setVisible(false);
     }
     @FXML
     private void rice(MouseEvent event) {
@@ -96,6 +98,7 @@ public class CanteenGameController {
         setItemScoreNegativ();
         cake.setVisible(false);
     }
+
     @FXML
     private void itemScoreSystem(){
         if(itemScore >= 6){
@@ -104,6 +107,11 @@ public class CanteenGameController {
             player.setLungs(player.getNoLungs());
             player.setPancreas(player.getNoPancreas());
             healthMeter.setProgress(1);
+        } else if (itemScore >= 4){
+            player.setHeart(player.getNoHeart());
+            player.setLiver(player.getNoLiver());
+            player.setPancreas(player.getNoPancreas());
+            healthMeter.setProgress(0.75);
         } else if (itemScore >= 3) {
             player.setHeart(player.getNoHeart());
             player.setPancreas(player.getNoPancreas());
@@ -117,6 +125,4 @@ public class CanteenGameController {
             healthMeter.setProgress(0);
         }
     }
-
-
 }

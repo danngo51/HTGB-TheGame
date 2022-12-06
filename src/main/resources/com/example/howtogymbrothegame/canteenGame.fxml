@@ -24,7 +24,7 @@
             <Image url="file:src/Images/carrot.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="chicken" fitHeight="61.0" fitWidth="66.0" layoutX="131.0" layoutY="195.0" onContextMenuRequested="#chicken" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="chicken" fitHeight="61.0" fitWidth="66.0" layoutX="131.0" layoutY="195.0" onMouseClicked="#chicken" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="file:src/Images/chickenleg.png" />
          </image>
@@ -39,17 +39,16 @@
             <Image url="file:src/Images/tomatobi.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="21.0" fitWidth="39.0" layoutX="501.0" layoutY="216.0" onMouseClicked="#candy" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="candy" fitHeight="21.0" fitWidth="39.0" layoutX="501.0" layoutY="216.0" onMouseClicked="#candy" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="file:src/Images/candy.png" />
          </image>
       </ImageView>
-      <ImageView fx:id="bellpeper" fitHeight="32.0" fitWidth="39.0" layoutX="335.0" layoutY="212.0" onMouseClicked="#bellpeper" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="bellpepper" fitHeight="32.0" fitWidth="39.0" layoutX="335.0" layoutY="212.0" onMouseClicked="#bellpepper" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="file:src/Images/bellpepper.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="50.0" fitWidth="68.0" layoutX="255.0" layoutY="202.0" pickOnBounds="true" preserveRatio="true" />
       <ImageView fx:id="rice" fitHeight="39.0" fitWidth="50.0" layoutX="388.0" layoutY="199.0" onMouseClicked="#rice" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="file:src/Images/rice.png" />
